@@ -4,7 +4,9 @@ export default {
     primary: '#34ace0',
     success: '#05c46b',
     warning: '#ffa801',
-    danger: '#eb2f06'
+    danger: '#eb2f06',
+    control: '#d1d1d1',
+    disabled: '#f1f1f1'
   },
 
   dimensions: {

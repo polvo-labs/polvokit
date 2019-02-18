@@ -1,0 +1,27 @@
+---
+name: Input
+route: /input
+---
+
+import { Playground } from 'docz'
+import VerticalSpacer from '../VerticalSpacer'
+import Icon from '../Icon'
+import Input from '.' 
+
+# Input
+
+<Playground>
+  <VerticalSpacer>
+    <Input placeholder='Type something...' />
+    <Input placeholder='Disabled input' disabled />
+  </VerticalSpacer>
+</Playground>
+
+<Playground>
+  <VerticalSpacer>
+    <Input
+      before={<Icon icon='search' />}
+      placeholder='Type something...'
+    />
+  </VerticalSpacer>
+</Playground>
