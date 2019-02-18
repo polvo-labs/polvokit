@@ -13,6 +13,7 @@ export const Label = styled.label`
 export const Helper = styled.label`
   display: block;
   font-size: 12px;
+  color: ${theme('colors.textLight')};
 `
 
 export const Error = styled.label`
