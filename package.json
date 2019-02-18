@@ -24,6 +24,10 @@
     "ansi-styles": "^3.2.0"
   },
   "dependencies": {
+    "object-path": "^0.11.4"
+  },
+  "peerDependencies": {
+    "react": "16.x",
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
@@ -31,10 +35,9 @@
     "object-path": "^0.11.4",
     "polished": "^3.0.0",
     "styled-components": "^4.1.3",
-    "styled-tools": "^1.7.1"
-  },
-  "peerDependencies": {
-    "react": "16.x"
+    "styled-tools": "^1.7.1",
+    "styled-media-query": "^2.1.1",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "docz": "^0.13.7",
@@ -43,8 +46,16 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-router-dom": "^4.3.1",
-    "styled-media-query": "^2.1.1"
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "object-path": "^0.11.4",
+    "polished": "^3.0.0",
+    "styled-components": "^4.1.3",
+    "styled-tools": "^1.7.1",
+    "styled-media-query": "^2.1.1",
+    "react-router-dom": "^4.3.1"
   },
   "author": "",
   "homepage": "",

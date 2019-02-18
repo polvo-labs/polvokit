@@ -1,0 +1,46 @@
+---
+name: Vertical Spacer
+route: /vertical-spacer
+---
+
+import { Playground, PropsTable } from 'docz'
+import Button from '../Button' 
+import VerticalSpacer from '.'
+
+# VerticalSpacer
+
+Sets vertical margin between its children:
+
+<Playground>
+  <VerticalSpacer>
+    <div>
+      <Button>button 1</Button>
+    </div>
+    <div>
+      <Button>button 2</Button>
+    </div>
+    <div>
+      <Button>button 3</Button>
+    </div>
+  </VerticalSpacer>
+</Playground>
+
+With 50px:
+
+<Playground>
+  <VerticalSpacer space={50}>
+    <div>
+      <Button>button 1</Button>
+    </div>
+    <div>
+      <Button>button 2</Button>
+    </div>
+    <div>
+      <Button>button 3</Button>
+    </div>
+  </VerticalSpacer>
+</Playground>
+
+## Props
+
+<PropsTable of={VerticalSpacer} />
