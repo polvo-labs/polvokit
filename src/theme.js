@@ -6,7 +6,8 @@ export default {
     warning: '#ffa801',
     danger: '#eb2f06',
     control: '#d1d1d1',
-    disabled: '#f1f1f1'
+    disabled: '#f1f1f1',
+    text: '#333333'
   },
 
   dimensions: {

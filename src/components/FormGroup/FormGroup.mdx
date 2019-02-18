@@ -1,0 +1,81 @@
+---
+name: FormGroup
+route: /form-group
+---
+
+import { Playground, PropsTable } from 'docz'
+import Input from '../Input'
+import FormGroup from '.' 
+
+# FormGroup
+
+A container for any type of form controls. It supports label, error and helpers.
+
+<Playground>
+  <FormGroup
+    id='input'
+    label='Input Label'
+  >
+    <Input id='input' />
+  </FormGroup>
+</Playground>
+
+### Helper
+
+<Playground>
+  <FormGroup
+    id='input'
+    label='Input Label'
+    helper='Some hint here...'
+  >
+    <Input id='input' />
+  </FormGroup>
+</Playground>
+
+### Error
+
+<Playground>
+  <FormGroup
+    id='input'
+    label='Input Label'
+    error='This field is invalid'
+  >
+    <Input id='input' />
+  </FormGroup>
+</Playground>
+
+### Helper and Error
+
+<Playground>
+  <FormGroup
+    id='input'
+    label='Input Label'
+    helper='Some hint for the input here'
+    error='This field is invalid'
+  >
+    <Input id='input' />
+  </FormGroup>
+</Playground>
+
+### Others components
+
+FormGroup is not restricted to input components. It's possible
+to combine it with any component:
+
+<Playground>
+  <FormGroup
+    id='input'
+    label='Input Label'
+    helper='Some hint for the input here'
+    error='This field is invalid'
+  >
+    <div style={{ height: 100, backgroundColor: 'hotpink' }}>
+      I could be a custom form control
+    </div>
+  </FormGroup>
+</Playground>
+
+
+## Props
+
+<PropsTable of={FormGroup} />
