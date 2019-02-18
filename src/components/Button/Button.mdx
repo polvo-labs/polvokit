@@ -1,0 +1,162 @@
+---
+name: Button
+route: /button
+---
+
+import { Playground, PropsTable } from 'docz'
+import { MemoryRouter } from 'react-router-dom'
+import Button from '.'
+import Icon from '../Icon'
+
+# Button
+
+Examples:
+
+<Playground>
+  <div>
+    <Button>
+      Default
+    </Button>
+    <Button appearance='primary'>
+      Primary
+    </Button>
+    <Button appearance='success'>
+      Success
+    </Button>
+    <Button appearance='warning'>
+      Warning
+    </Button>
+    <Button appearance='danger'>
+      Danger
+    </Button>
+  </div>
+</Playground>
+
+Disabled buttons:
+
+<Playground>
+  <div>
+    <Button disabled>
+      Disabled
+    </Button>
+    <Button disabled appearance='primary'>
+      Disabled
+    </Button>
+    <Button disabled appearance='success'>
+      Disabled
+    </Button>
+    <Button disabled appearance='warning'>
+      Disabled
+    </Button>
+    <Button disabled appearance='danger'>
+      Disabled
+    </Button>
+  </div>
+</Playground>
+
+Loading state:
+
+<Playground>
+  <div>
+    <Button loading disabled>
+      Disabled
+    </Button>
+    <Button loading disabled appearance='primary'>
+      Disabled
+    </Button>
+    <Button loading disabled appearance='success'>
+      Disabled
+    </Button>
+    <Button loading disabled appearance='warning'>
+      Disabled
+    </Button>
+    <Button loading disabled appearance='danger'>
+      Disabled
+    </Button>
+  </div>
+</Playground>
+
+`before` and `after` props can be used to add icons:
+
+<Playground>
+  <div>
+    <Button before={<Icon icon='arrow-left' />}>
+       Back
+    </Button>
+    <Button before={<Icon icon='home' />} appearance='primary'>
+      Go Home
+    </Button>
+    <Button after={<Icon icon='check' />} appearance='success'>
+      Approve
+    </Button>
+    <Button before={<Icon icon='search' />} after={<Icon icon='search' />} appearance='warning'>
+      Search
+    </Button>
+    <Button before={<Icon icon='trash' />} appearance='danger'>
+      Remove
+    </Button>
+  </div>
+</Playground>
+
+Fill:
+
+<Playground>
+  <Button fill appeareance='primary'>
+    Button filled
+  </Button>
+  <br /><br />
+  <Button fillAt='medium' appeareance='primary'>
+    Only filled in mobile
+  </Button>
+</Playground>
+
+## Custom components
+
+You can use the prop `as` to render another component instead of a common button:
+
+```js
+// renders an anchor
+<Button as='a' href='#'>
+  I'm an anchor
+</Button>
+```
+
+```js
+// renders a react-router Link component
+<Button as={Link} to='/'>
+  I'm a Link
+</Button>
+```
+
+However, the Button component provides two shortcuts to use these same components:
+
+```js
+<Button.Anchor href='#'>
+  I'm an anchor
+</Button.Anchor>
+```
+
+```js
+<Button.Link to='/'>
+  I'm an anchor
+</Button.Link>
+```
+
+So you don't need to import { Link } from react-router to use Button as a Link.
+
+<Playground>
+  <div>
+    <Button.Anchor href='#'>
+      I'm a link
+    </Button.Anchor>
+    <MemoryRouter>
+      <Button.Link to='/'>
+        I'm a react-router Link
+      </Button.Link>
+    </MemoryRouter>
+  </div>
+</Playground>
+
+## Props
+
+<PropsTable of={Button} /> 
