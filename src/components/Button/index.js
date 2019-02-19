@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Icon from '../Icon'
 import theme from '../../theme'
+import filterProps from '../../utils/filterProps'
 import { ButtonStyled, Before, After, Loading } from './styles'
 
 function Button ({ before, after, children, loading, ...props }) {
@@ -36,25 +37,33 @@ Button.propTypes = {
   /** Loading state */
   loading: PropTypes.bool,
 
-  /** Fill button width */
-  fill: PropTypes.bool,
+  /** Full button width */
+  full: PropTypes.bool,
 
-  /** Fill button at certain breakpoint */
-  fillAt: PropTypes.oneOf(Object.keys(theme.breakpoints))
+  /** Full button at certain breakpoint */
+  fullAt: PropTypes.oneOf(Object.keys(theme.breakpoints))
 }
 
 Button.defaultProps = {
   appearance: 'default',
   loading: false,
-  fill: false
+  full: false
 }
 
 Button.Anchor = function ButtonAnchor (props) {
   return <Button as='a' {...props} />
 }
 
+const FilteredLink = props =>
+  <Link {...filterProps(props, Button.propTypes)} />
+
 Button.Link = function ButtonLink (props) {
-  return <Button as={Link} {...props} />
+  return (
+    <Button
+      as={FilteredLink}
+      {...props}
+    />
+  )
 }
 
 export default Button

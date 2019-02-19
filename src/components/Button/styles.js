@@ -4,7 +4,7 @@ import { ifProp } from 'styled-tools'
 import theme from '../../utils/theme'
 import mediaQuery from '../../utils/mediaQuery'
 
-const fillCss = css`
+const fullCss = css`
   display: flex;
   width: 100%;
 `
@@ -25,9 +25,9 @@ export const ButtonStyled = styled.button`
   text-decoration: none;
   box-sizing: border-box;
 
-  ${ifProp('fill', fillCss)}
+  ${ifProp('full', fullCss)}
   
-  ${p => p.fillAt && mediaQuery.lessThan(p.fillAt)(fillCss)}
+  ${p => p.fullAt && mediaQuery.lessThan(p.fullAt)(fullCss)}
 
   & + & {
     margin-left: 10px;
