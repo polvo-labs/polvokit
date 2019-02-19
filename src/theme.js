@@ -9,7 +9,7 @@ export default {
     disabled: '#f1f1f1',
     text: '#333333',
     textLight: '#757575',
-    placeholder: '#757575'
+    placeholder: '#999999'
   },
 
   dimensions: {

@@ -30,6 +30,11 @@ export const InputStyled = styled.input`
     cursor: not-allowed;
     background: ${theme('colors.disabled')};
   }
+  
+  &::placeholder {
+    opacity: 1;
+    color: ${theme('colors.placeholder')};
+  }
 `
 
 export const Before = styled.div`
