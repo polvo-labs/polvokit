@@ -23,5 +23,5 @@ export const Error = styled.label`
 `
 
 export const Control = styled.div`
-  margin: 5px 0;
+  margin: 3px 0;
 `
