@@ -1,0 +1,51 @@
+---
+name: Select
+route: /select
+---
+
+import { Playground } from 'docz'
+import FormGrid from '../FormGrid'
+import FormGroup from '../FormGroup'
+import Input from '../Input'
+import Select from '.'
+
+# Select
+
+Just a wrapper around [react-select v2](https://react-select.com/home) for
+restyling.
+
+<Playground>
+  <Select
+    options={[
+      { value: 'a', label: 'Option 1' },
+      { value: 'b', label: 'Option 2' },
+      { value: 'c', label: 'Option 3' }
+    ]}
+  />
+</Playground>
+
+Comparison between a select and an input component:
+
+<Playground>
+  <FormGrid>
+    <FormGroup
+      id='input'
+      label='Common Input'
+    >
+      <Input id='input' defaultValue='A common Input' />
+    </FormGroup>
+    <FormGroup
+      id='select'
+      label='Select'
+    >
+      <Select
+        id='select'
+        options={[
+          { value: 'a', label: 'Option 1' },
+          { value: 'b', label: 'Option 2' },
+          { value: 'c', label: 'Option 3' }
+        ]}
+      />
+    </FormGroup>
+  </FormGrid>
+</Playground>

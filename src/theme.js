@@ -8,7 +8,8 @@ export default {
     control: '#d1d1d1',
     disabled: '#f1f1f1',
     text: '#333333',
-    textLight: '#757575'
+    textLight: '#757575',
+    placeholder: '#757575'
   },
 
   dimensions: {
