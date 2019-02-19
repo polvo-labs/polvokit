@@ -13,7 +13,7 @@ export default {
   },
 
   dimensions: {
-    inputHeight: '40px'
+    controlHeight: '40px'
   },
 
   fonts: {

@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const InputStyled = styled.input`
   display: flex;
   width: 100%;
-  height: ${theme('dimensions.inputHeight')};
+  height: ${theme('dimensions.controlHeight')};
   background-color: #fff;
   border: 1px solid ${theme('colors.control')};
   box-sizing: border-box; 

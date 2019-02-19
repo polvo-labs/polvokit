@@ -13,7 +13,7 @@ export const ButtonStyled = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: ${theme('dimensions.inputHeight')};
+  height: ${theme('dimensions.controlHeight')};
   padding: 0 15px;
   background-color: ${p => theme(`colors.${p.appearance}`)};
   color: ${p => p.appearance === 'default' ? '#000' : '#fff'};

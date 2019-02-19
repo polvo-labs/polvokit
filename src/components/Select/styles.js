@@ -6,11 +6,11 @@ export const Container = styled.div`
   text-align: left;
   
   .react-select__container {
-    height: ${theme('dimensions.inputHeight')};
+    height: ${theme('dimensions.controlHeight')};
   }
 
   .react-select__control {
-    height: ${theme('dimensions.inputHeight')};
+    height: ${theme('dimensions.controlHeight')};
     padding: 0 5px;
     border-width: 1px;
     font-size: 16px;
