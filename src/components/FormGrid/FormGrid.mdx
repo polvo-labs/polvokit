@@ -1,0 +1,78 @@
+---
+name: FormGrid
+route: /form-grid
+---
+
+import { Playground, PropsTable } from 'docz'
+import VerticalSpacer from '../VerticalSpacer'
+import FormGroup from '../FormGroup'
+import Input from '../Input'
+import FormGrid from '.'
+
+# FormGrid
+
+A component for building forms.
+
+<Playground>
+  <VerticalSpacer>
+    <FormGrid>
+      <FormGroup
+        id='name'
+        label='Name'
+      >
+        <Input id='name' name='name' />
+      </FormGroup>
+      <FormGroup
+        id='email'
+        label='Email'
+      >
+        <Input id='email' name='email' />
+      </FormGroup>
+    </FormGrid>
+    <FormGrid>
+      <FormGroup
+        id='phone'
+        label='Phone'
+      >
+        <Input id='phone' name='phone' />
+      </FormGroup>
+      <FormGroup
+        id='address'
+        label='Address'
+      >
+        <Input id='address' name='address' />
+      </FormGroup>
+    </FormGrid>
+  </VerticalSpacer>
+</Playground>
+
+It also supports nesting:
+
+<Playground>
+  <FormGrid>
+    <FormGroup
+      id='address'
+      label='Address'
+    >
+      <Input id='address' name='address' />
+    </FormGroup>
+    <FormGrid>
+      <FormGroup
+        id='neighborhood'
+        label='Neighborhood'
+      >
+        <Input id='neighborhood' name='neighborhood' />
+      </FormGroup>
+      <FormGroup
+        id='number'
+        label='Number'
+      >
+        <Input id='number' name='number' />
+      </FormGroup>
+    </FormGrid>
+  </FormGrid>
+</Playground>
+
+## Props
+
+<PropsTable of={FormGrid} />
