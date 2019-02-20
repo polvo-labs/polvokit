@@ -1,0 +1,24 @@
+---
+name: PolvoLogo
+route: /polvo-logo
+---
+
+import { Playground, PropsTable } from 'docz'
+import PolvoLogo from '.'
+
+# PolvoLogo
+
+<Playground>
+  <div style={{ width: 300, padding: 50 }}>
+    <PolvoLogo />
+  </div>
+  <div style={{ width: 300, padding: 50, backgroundColor: 'black' }}>
+    <PolvoLogo white />
+  </div>
+</Playground>
+
+## Props
+
+It also supports all props from Image component.
+
+<PropsTable of={PolvoLogo} />
