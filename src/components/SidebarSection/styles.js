@@ -4,7 +4,10 @@ import theme from '../../utils/theme'
 
 export const Container = styled.section`
   ${ifProp('bottom', 'margin-top: auto;')}
-  padding-bottom: 25px;
+
+  &:not(:last-child) {
+    padding-bottom: 25px;
+  }
 `
 
 export const Title = styled.h2`

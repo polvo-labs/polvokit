@@ -10,7 +10,7 @@ export default function SidebarMenu (props) {
   const icon = state ? 'times' : 'bars'
 
   return (
-    <div>
+    <React.Fragment>
       <Menu
         open={state}
         {...props}
@@ -22,11 +22,15 @@ export default function SidebarMenu (props) {
       >
         <Icon icon={icon} />
       </MenuButton>
-    </div>
+    </React.Fragment>
   )
 }
 
 const Menu = styled.nav`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
   ${mediaQuery.lessThan('sidebar')`
     display: none;
     position: absolute;
