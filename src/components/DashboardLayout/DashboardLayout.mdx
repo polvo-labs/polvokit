@@ -1,0 +1,57 @@
+---
+name: DashboardLayout
+route: /dashboard-layout
+---
+
+# DashboardLayout
+
+Polvokit provides a set of components to help building dashboard
+layouts.
+
+```js
+import {
+  DashboardLayout,
+  SidebarSection,
+  SidebarButton,
+  Icon
+} from '@polvo-labs/polvokit'
+
+function Dashboard () {
+  return (
+    <DashboardLayout
+      sidebar={(
+        <React.Fragment>
+          <SidebarSection title='Basic'>
+            <SidebarButton.NavLink
+              exact
+              to='/'
+              before={<Icon icon='home' />}
+              children='Home'
+            />
+            <SidebarButton.NavLink
+              exact
+              to='/users'
+              before={<Icon icon='users' />}
+              children='Users'
+            />
+          </SidebarSection>
+          <SidebarSection title='Your account' bottom>
+            <SidebarButton.NavLink
+              to='/settings'
+              before={<Icon icon='cog' />}
+              children='Settings'
+            />
+            <SidebarButton
+              to='/sign-out'
+              before={<Icon icon='sign-out-alt' />}
+              children='Sign out'
+            />
+          </SidebarSection>
+        </React.Fragment>
+      )}
+    >
+      dashboard content
+    </DashboardLayout>
+  )
+}
+```

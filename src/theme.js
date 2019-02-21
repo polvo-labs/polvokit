@@ -9,11 +9,15 @@ export default {
     disabled: '#f1f1f1',
     text: '#333333',
     textLight: '#757575',
-    placeholder: '#999999'
+    placeholder: '#999999',
+    sidebar: '#F4F5F7',
+    sidebarButtonColor: '#333333',
+    sidebarButtonBeforeColor: '#333333'
   },
 
   dimensions: {
-    controlHeight: '40px'
+    controlHeight: '40px',
+    sidebarWidth: '240px'
   },
 
   fonts: {
@@ -24,6 +28,7 @@ export default {
     xsmall: '400px',
     small: '600px',
     medium: '800px',
-    large: '1000px'
+    large: '1000px',
+    sidebar: '1000px'
   }
 }

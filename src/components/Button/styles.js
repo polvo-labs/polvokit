@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/macro'
+import styled, { css } from 'styled-components'
 import { darken } from 'polished'
 import { ifProp } from 'styled-tools'
 import theme from '../../utils/theme'

@@ -14,11 +14,11 @@ function Button ({ before, after, children, loading, ...props }) {
           <Icon icon='spinner' spin />
         </Loading>
       ) : (
-        <>
+        <React.Fragment>
           {before && <Before>{before}</Before>}
           {children}
           {after && <After>{after}</After>}
-        </>
+        </React.Fragment>
       )}
     </ButtonStyled>
   )
