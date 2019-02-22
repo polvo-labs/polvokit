@@ -28,8 +28,13 @@ export const Button = styled.button.attrs({
     color: ${theme('colors.control')};
   }
 
-  &:not([disabled]):hover {
+  &:not([disabled]):hover,
+  &:not([disabled]):active {
     background-color: ${theme('colors.light')};
+  }
+
+  &:not([disabled]):active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125)
   }
 `
 

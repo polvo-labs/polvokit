@@ -1,5 +1,6 @@
 export { default as BackButton } from './components/BackButton'
 export { default as Button } from './components/Button'
+export { default as Calendar } from './components/Calendar'
 export { default as DashboardLayout } from './components/DashboardLayout'
 export { default as FormGrid } from './components/FormGrid'
 export { default as FormGroup } from './components/FormGroup'
