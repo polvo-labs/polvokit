@@ -5,6 +5,7 @@ export default {
     success: '#05c46b',
     warning: '#ffa801',
     danger: '#eb2f06',
+    light: '#ebebeb',
     control: '#d1d1d1',
     disabled: '#f1f1f1',
     text: '#333333',

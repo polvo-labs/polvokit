@@ -1,0 +1,57 @@
+---
+name: Pagination
+route: /pagination
+---
+
+import { Playground, PropsTable } from 'docz'
+import { NumberValue } from 'react-values' 
+import Pagination from '.'
+
+# Pagination
+
+<Playground>
+  <NumberValue defaultValue={1}>
+    {({ value, set }) => (
+      <Pagination
+        total={10}
+        page={value}
+        onChange={set}
+      />
+    )}
+  </NumberValue>
+</Playground>
+
+Centralized:
+
+<Playground>
+  <NumberValue defaultValue={1}>
+    {({ value, set }) => (
+      <Pagination
+        center
+        total={10}
+        page={value}
+        onChange={set}
+      />
+    )}
+  </NumberValue>
+</Playground>
+
+## Usage
+
+```js
+import { Pagination } from 'polvokit'
+
+function Example () {
+  return (
+    <Pagination
+      page={2} // current page
+      total={12} // total of pages
+      onChange={page => console.log(page)} // change handler
+    />
+  )
+}
+```
+
+## Props
+
+<PropsTable of={Pagination} />

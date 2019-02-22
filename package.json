@@ -55,6 +55,7 @@
     "react-dom": "^16.8.2",
     "react-router-dom": "^4.3.1",
     "react-select": "^2.4.1",
+    "react-values": "^0.3.3",
     "standard": "^12.0.1",
     "styled-components": "^4.1.3",
     "styled-media-query": "^2.1.1",
