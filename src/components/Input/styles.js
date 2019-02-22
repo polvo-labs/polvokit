@@ -17,7 +17,7 @@ export const InputStyled = styled.input`
   box-sizing: border-box; 
   font-family: ${theme('fonts.primary')};
   font-size: 16px;
-  color: #000;
+  color: ${theme('colors.text')};
   padding: 0 10px;
   border-radius: 3px;
 

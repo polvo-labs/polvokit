@@ -23,10 +23,11 @@ export const Container = styled.div`
     }
   }
 
-  .react-select__control.--is-focused {
-      border-color: ${theme('colors.primary')};
-      box-shadow: none;
-    }
+  .react-select__control--is-focused,
+  .react-select__control--is-focused:hover {
+    border-color: ${theme('colors.primary')};
+    box-shadow: 0 0 1px ${theme('colors.primary')};
+  }
 
   .react-select__placeholder {
     color: ${theme('colors.placeholder')};
