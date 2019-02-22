@@ -1,5 +1,5 @@
 {
-  "name": "@polvo-labs/polvokit",
+  "name": "polvokit",
   "version": "0.0.1",
   "description": "React UI Library",
   "main": "lib/index.js",
