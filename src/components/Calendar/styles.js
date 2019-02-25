@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { ifProp, ifNotProp } from 'styled-tools'
 import theme from '../../utils/theme'
 
 export const Container = styled.div`
@@ -14,7 +15,7 @@ export const Header = styled.div`
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  height: 55px;
+  height: 40px;
 `
 
 export const HeaderButton = styled.button.attrs({
@@ -49,14 +50,62 @@ export const HeaderInfo = styled.div`
 
 export const Weekdays = styled.div`
   display: flex;
+  align-items: center;
   border-bottom: 1px solid ${theme('colors.control')};
-  height: 40px;
+  height: 30px;
+  background-color: ${theme('colors.light')};
 `
 
 export const Weekday = styled.div`
-
+  flex: 1 1;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
 `
 
 export const Grid = styled.div`
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0;
+`
+
+export const Cell = styled.div`
+  display: flex;
+  justify-content: center;
+  width: ${1 / 7 * 100}%;
+`
+
+export const Day = styled.button`
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: 5px;
+  padding: 0;
+
+  ${ifProp('isAdjacentMonth', css`
+    color: ${theme('colors.placeholder')};
+  `)}
+
+  ${ifNotProp('isAdjacentMonth', css`
+    color: ${theme('colors.text')};
+  `)}
+
+  ${ifProp('isToday', css`
+    font-weight: bold;
+  `)}
+
+  ${ifProp('isSelected', css`
+    background-color: ${theme('colors.primary')};
+    color: #fff;
+  `)}
+
+  ${ifNotProp('isSelected', css`
+    &:hover {
+      background-color: ${theme('colors.light')};
+    }
+  `)}
 `

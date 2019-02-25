@@ -3,19 +3,36 @@ name: Calendar
 route: /calendar
 ---
 
-import { Playground, PropsTable } from 'docz' 
+import { Playground, PropsTable } from 'docz'
+import { Value } from 'react-values'
 import Calendar from '.'
 
 # Calendar
 
 <Playground>
-  <Calendar />
+  <Value>
+    {({ value, set }) => (
+      <Calendar
+        value={value}
+        onChange={set}
+      />
+    )}
+  </Value>
 </Playground>
 
 ## Usage
 
 ```js
 import { Calendar } from 'polvokit'
+
+function Example () {
+  return (
+    <Calendar
+      value={new Date()} // selected date
+      onChange={onChange} // change handler
+    />
+  )
+}
 ```
 
 ## Props
