@@ -13,7 +13,8 @@ export default {
     placeholder: '#999999',
     sidebar: '#F4F5F7',
     sidebarButtonColor: '#333333',
-    sidebarButtonBeforeColor: '#333333'
+    sidebarButtonBeforeColor: '#333333',
+    white: '#fff'
   },
 
   dimensions: {
