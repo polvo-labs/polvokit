@@ -19,7 +19,8 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server",
     "lint": "standard **/**/**/*.js",
-    "docs": "docz dev"
+    "docs": "docz dev",
+    "docs:build": "docz build"
   },
   "resolutions": {
     "ansi-styles": "^3.2.0"
