@@ -1,0 +1,41 @@
+---
+name: InputDateRangePicker
+route: /input-date-range-picker
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Value } from 'react-values'
+import InputDateRangePicker from '.'
+
+# InputDateRangePicker
+
+<Playground>
+  <Value>
+    {({ value, set }) => (
+      <div>
+        <InputDateRangePicker
+          value={value}
+          onChange={set}
+        />
+        <p>
+          {JSON.stringify(value, null, 2)}
+        </p>
+      </div>
+    )}
+  </Value>
+</Playground>
+
+## Usage
+
+```js
+import { InputDateRangePicker } from 'polvokit'
+
+<InputDateRangePicker
+  value={value}
+  onChange={onChange}
+/>
+```
+
+## Props
+
+<PropsTable of={InputDateRangePicker} />
