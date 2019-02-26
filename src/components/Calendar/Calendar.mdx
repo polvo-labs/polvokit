@@ -20,6 +20,28 @@ import Calendar from '.'
   </Value>
 </Playground>
 
+### Disable days
+
+You can disable some days by using the `isDaySelectable` prop:
+
+<Playground>
+  <p>
+    Weekend days are disabled:
+  </p>
+  <Value>
+    {({ value, set }) => (
+      <Calendar
+        value={value}
+        onChange={set}
+        isDaySelectable={date => {
+          const weekday = date.getDay()
+          return weekday !== 0 && weekday !== 6
+        }}
+      />
+    )}
+  </Value>
+</Playground>
+
 ## Usage
 
 ```js

@@ -104,9 +104,14 @@ export const Day = styled.button`
     color: #fff;
   `)}
 
-  ${ifNotProp('isSelected', css`
+  ${p => !p.isSelected && !p.isDisabled && css`
     &:hover {
       background-color: ${theme('colors.light')};
     }
+  `}
+
+  ${ifProp('isDisabled', css`
+    cursor: not-allowed;
+    color: ${theme('colors.danger')};
   `)}
 `

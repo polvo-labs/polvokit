@@ -25,7 +25,8 @@ function Calendar (props) {
     value,
     onChange,
     formatHeaderDisplay,
-    formatWeekday
+    formatWeekday,
+    isDaySelectable
   } = props
 
   const [ displayDate, setDisplayDate ] = useState(value || new Date())
@@ -65,22 +66,30 @@ function Calendar (props) {
         ))}
       </Weekdays>
       <Grid>
-        {days.map(date => (
-          <Cell key={date.toString()}>
-            <Day
-              isAdjacentMonth={!isSameMonth(displayDate, date)}
-              isToday={isToday(date)}
-              isSelected={isSameDay(date, value)}
-              onClick={() => {
-                if (!isSameDay(date, value)) {
-                  onChange(date)
-                }
-              }}
-            >
-              {date.getDate()}
-            </Day>
-          </Cell>
-        ))}
+        {days.map(date => {
+          const isDisabled = !isDaySelectable(date)
+          return (
+            <Cell key={date.toString()}>
+              <Day
+                isAdjacentMonth={!isSameMonth(displayDate, date)}
+                isToday={isToday(date)}
+                isSelected={isSameDay(date, value)}
+                isDisabled={isDisabled}
+                onClick={() => {
+                  if (isDisabled) {
+                    return
+                  }
+
+                  if (!isSameDay(date, value)) {
+                    onChange(date)
+                  }
+                }}
+              >
+                {date.getDate()}
+              </Day>
+            </Cell>
+          )
+        })}
       </Grid>
     </Container>
   )
@@ -97,12 +106,16 @@ Calendar.propTypes = {
   formatWeekday: PropTypes.func,
 
   /** Header display formatter */
-  formatHeaderDisplay: PropTypes.func
+  formatHeaderDisplay: PropTypes.func,
+
+  /** Whether the day is selectable */
+  isDaySelectable: PropTypes.func
 }
 
 Calendar.defaultProps = {
   value: null,
   onChange: () => null,
+  isDaySelectable: date => true,
   formatWeekday: utils.formatWeekday,
   formatHeaderDisplay: date =>
     `${utils.formatMonth(date)} - ${date.getFullYear()}`
