@@ -8,7 +8,8 @@
     "repository": null,
     "native": false,
     "codeSandbox": true,
-    "themeConfig": {}
+    "themeConfig": {},
+    "base": "/polvokit/"
   },
   "entries": {
     "src/index.mdx": {
