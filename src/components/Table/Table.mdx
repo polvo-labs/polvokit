@@ -1,0 +1,50 @@
+---
+name: Table
+route: /table
+---
+
+import { Playground, PropsTable } from 'docz'
+import Table from '.'
+
+# Table
+
+<Playground>
+  <Table
+    data={[
+      { name: 'Peter Parker', hero: 'Spiderman' },
+      { name: 'Tony Stark', hero: 'Ironman' },
+      { name: 'Clark Kent', hero: 'Superman' },
+      { name: 'Bruce Wayne', hero: 'Batman' }
+    ]}
+    columns={[
+      {
+        header: 'Name',
+        cell: row => row.name
+      },
+      {
+        header: 'Hero',
+        cell: row => row.hero
+      }
+    ]}
+  />
+</Playground>
+
+## Usage
+
+```js
+import { Table } from 'polvokit'
+
+<Table
+  data={data}
+  columns={[
+    {
+      header: 'Name',
+      cell: row => row.name
+    }
+  ]}
+/>
+```
+
+## Props
+
+<PropsTable of={Table} />
