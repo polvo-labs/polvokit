@@ -20,7 +20,8 @@
     "test:watch": "nwb test-react --server",
     "lint": "standard **/**/**/*.js",
     "docs": "docz dev",
-    "docs:build": "docz build"
+    "docs:cp": "cp -r ./.docz/dist ./docs",
+    "docs:build": "docz build; npm run docs:cp"
   },
   "resolutions": {
     "ansi-styles": "^3.2.0"
