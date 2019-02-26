@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { ifProp, ifNotProp } from 'styled-tools'
 import theme from '../../utils/theme'
+import mediaQuery from '../../utils/mediaQuery'
 
 export const Container = styled.div`
   border: 1px solid ${theme('colors.control')};
@@ -37,6 +38,10 @@ export const HeaderButton = styled.button.attrs({
   &:active {
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125)
   }
+
+  ${mediaQuery.lessThan('small')`
+    padding: 0 10px;
+  `}
 `
 
 export const HeaderInfo = styled.div`
@@ -47,6 +52,12 @@ export const HeaderInfo = styled.div`
   height: inherit;
   border-left: 1px solid ${theme('colors.control')};
   border-right: 1px solid ${theme('colors.control')};
+  font-family: ${theme('fonts.primary')};
+  font-size: 16px;
+
+  ${mediaQuery.lessThan('small')`
+    font-size: 14px;
+  `}
 `
 
 export const Weekdays = styled.div`
@@ -62,7 +73,16 @@ export const Weekday = styled.div`
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: ${theme('fonts.primary')};
   font-size: 14px;
+
+  ${mediaQuery.lessThan('small')`
+    font-size: 0;
+
+    &:first-letter {
+      font-size: 12px;
+    }
+  `}
 `
 
 export const Grid = styled.div`
@@ -86,6 +106,15 @@ export const Day = styled.button`
   border-radius: 100%;
   margin: 5px;
   padding: 0;
+  font-family: ${theme('fonts.primary')};
+  font-size: 16px;
+  flex-shrink: 0;
+
+  ${mediaQuery.lessThan('small')`
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+  `}
 
   ${ifProp('isAdjacentMonth', css`
     color: ${theme('colors.placeholder')};
