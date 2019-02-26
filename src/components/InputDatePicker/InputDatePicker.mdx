@@ -12,12 +12,14 @@ import InputDatePicker from '.'
 <Playground>
   <Value>
     {({ value, set }) => (
-      <div style={{ height: 600 }}>
+      <div style={{ height: 350 }}>
         <InputDatePicker
           value={value}
           onChange={set}
         />
         <p>
+          <strong>Date selected:</strong>
+          {' '}
           {value ? value.toString() : 'null'}
         </p>
       </div>
