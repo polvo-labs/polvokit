@@ -336,6 +336,33 @@
         }
       ]
     },
+    "src/components/InputDateRangePicker/InputDateRangePicker.mdx": {
+      "name": "InputDateRangePicker",
+      "route": "/input-date-range-picker",
+      "id": "31f054d5b85deccc500a9bd090d228da",
+      "filepath": "src/components/InputDateRangePicker/InputDateRangePicker.mdx",
+      "link": null,
+      "slug": "src-components-input-date-range-picker-input-date-range-picker",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "inputdaterangepicker",
+          "value": "InputDateRangePicker"
+        },
+        {
+          "depth": 2,
+          "slug": "usage",
+          "value": "Usage"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        }
+      ]
+    },
     "src/components/Pagination/Pagination.mdx": {
       "name": "Pagination",
       "route": "/pagination",

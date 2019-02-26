@@ -23,6 +23,8 @@ export const imports = {
     import(/* webpackPrefetch: true, webpackChunkName: "src-components-input-input" */ 'src/components/Input/Input.mdx'),
   'src/components/InputDatePicker/InputDatePicker.mdx': () =>
     import(/* webpackPrefetch: true, webpackChunkName: "src-components-input-date-picker-input-date-picker" */ 'src/components/InputDatePicker/InputDatePicker.mdx'),
+  'src/components/InputDateRangePicker/InputDateRangePicker.mdx': () =>
+    import(/* webpackPrefetch: true, webpackChunkName: "src-components-input-date-range-picker-input-date-range-picker" */ 'src/components/InputDateRangePicker/InputDateRangePicker.mdx'),
   'src/components/Pagination/Pagination.mdx': () =>
     import(/* webpackPrefetch: true, webpackChunkName: "src-components-pagination-pagination" */ 'src/components/Pagination/Pagination.mdx'),
   'src/components/PolvoLogo/PolvoLogo.mdx': () =>
