@@ -7666,6 +7666,10 @@ ms@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
+msk@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/msk/-/msk-1.0.3.tgz#8eeb462edb48ca7965ee576b1c8faa6296cd0044"
+
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/multicast-dns-service-types/-/multicast-dns-service-types-1.1.0.tgz#899f11d9686e5e05cb91b35d5f0e63b773cfc901"

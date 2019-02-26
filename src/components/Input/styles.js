@@ -1,5 +1,11 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { ifProp } from 'styled-tools'
 import theme from '../../utils/theme'
+
+const focusCss = css`
+  border-color: ${theme('colors.primary')};
+  box-shadow: 0 0 1px ${theme('colors.primary')};
+`
 
 export const Container = styled.div`
   display: block;
@@ -13,19 +19,20 @@ export const InputStyled = styled.input`
   width: 100%;
   height: ${theme('dimensions.controlHeight')};
   background-color: #fff;
-  border: 1px solid ${theme('colors.control')};
   box-sizing: border-box; 
   font-family: ${theme('fonts.primary')};
   font-size: 16px;
   color: ${theme('colors.text')};
   padding: 0 10px;
   border-radius: 3px;
+  border: 1px solid ${theme('colors.control')};
+
+  ${ifProp('focused', focusCss)}
 
   &:focus {
-    border-color: ${theme('colors.primary')};
-    box-shadow: 0 0 1px ${theme('colors.primary')};
+    ${focusCss}
   }
-
+  
   &[disabled] {
     cursor: not-allowed;
     background: ${theme('colors.disabled')};

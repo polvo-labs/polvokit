@@ -16,7 +16,7 @@ export const Menu = styled.nav`
     width: 100%;
     padding: 20px;
     background-color: ${theme('colors.sidebar')};
-    z-index: 999999;
+    z-index: ${theme('stacks.high')};
     box-sizing: border-box;
 
     ${ifProp('open', 'display: block;')}

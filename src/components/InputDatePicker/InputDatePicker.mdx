@@ -1,0 +1,45 @@
+---
+name: InputDatePicker
+route: /input-date-picker
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Value } from 'react-values'
+import InputDatePicker from '.'
+
+# InputDatePicker
+
+<Playground>
+  <Value>
+    {({ value, set }) => (
+      <div style={{ height: 600 }}>
+        <InputDatePicker
+          value={value}
+          onChange={set}
+        />
+        <p>
+          {value ? value.toString() : 'null'}
+        </p>
+      </div>
+    )}
+  </Value>
+</Playground>
+
+## Usage
+
+```js
+import { InputDatePicker } from 'polvokit'
+
+function Example () {
+  return (
+    <InputDatePicker
+      value={value}
+      onChange={onChange}
+    />
+  )
+}
+```
+
+## Props
+
+<PropsTable of={InputDatePicker} />

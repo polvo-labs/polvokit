@@ -5,6 +5,7 @@ import theme from '../../utils/theme'
 export const Container = styled.div`
   border: 1px solid ${theme('colors.control')};
   border-radius: 3px;
+  background-color: #fff;
 `
 
 export const Header = styled.div`

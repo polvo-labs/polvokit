@@ -32,5 +32,11 @@ export default {
     medium: '800px',
     large: '1000px',
     sidebar: '1000px'
+  },
+
+  stacks: {
+    high: 999999,
+    medium: 888888,
+    low: 111
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import {
   isSameMonth,
@@ -29,6 +29,13 @@ function Calendar (props) {
   } = props
 
   const [ displayDate, setDisplayDate ] = useState(value || new Date())
+
+  useEffect(() => {
+    if (value && !isSameMonth(displayDate, value)) {
+      setDisplayDate(value)
+    }
+  }, [value])
+
   const days = utils.makeDays(displayDate)
 
   return (
@@ -65,7 +72,9 @@ function Calendar (props) {
               isToday={isToday(date)}
               isSelected={isSameDay(date, value)}
               onClick={() => {
-                !isSameDay(date, value) && onChange(date)
+                if (!isSameDay(date, value)) {
+                  onChange(date)
+                }
               }}
             >
               {date.getDate()}
