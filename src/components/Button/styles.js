@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { darken } from 'polished'
 import { ifProp } from 'styled-tools'
 import theme from '../../utils/theme'
-import mediaQuery from '../../utils/mediaQuery'
+import { mq } from '../..'
 
 const fullCss = css`
   display: flex;
@@ -27,7 +27,7 @@ export const ButtonStyled = styled.button`
 
   ${ifProp('full', fullCss)}
   
-  ${p => p.fullAt && mediaQuery.lessThan(p.fullAt)(fullCss)}
+  ${p => p.fullAt && mq.below(p.fullAt, fullCss)(p)}
 
   & + & {
     margin-left: 10px;

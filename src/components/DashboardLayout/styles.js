@@ -1,6 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, css } from 'styled-components'
 import theme from '../../utils/theme'
-import mediaQuery from '../../utils/mediaQuery'
+import { mq } from '../..'
 
 export const GlobalStyles = createGlobalStyle`
   body {
@@ -10,10 +10,10 @@ export const GlobalStyles = createGlobalStyle`
 `
 
 export const Container = styled.div`
-  ${mediaQuery.greaterThan('sidebar')`
+  ${mq.above('sidebar', css`
     display: flex;
     min-height: 100vh;
-  `}
+  `)}
 `
 
 export const Sidebar = styled.aside`
@@ -21,7 +21,7 @@ export const Sidebar = styled.aside`
   background-color: ${theme('colors.sidebar')};
   position: relative;
 
-  ${mediaQuery.greaterThan('sidebar')`
+  ${mq.above('sidebar', css`
     display: flex;
     flex-direction: column;
     width: ${theme('dimensions.sidebarWidth')};
@@ -29,33 +29,33 @@ export const Sidebar = styled.aside`
     padding: 15px;
     height: 100vh;
     overflow: auto;
-  `}
+  `)}
 
-  ${mediaQuery.lessThan('sidebar')`
+  ${mq.below('sidebar', css`
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-  `}
+  `)}
 `
 
 export const ContentWrapper = styled.div`
   font-family: ${theme('fonts.primary')};
   box-sizing: border-box;
 
-  ${mediaQuery.greaterThan('sidebar')`
+  ${mq.above('sidebar', css`
     flex-grow: 1;
     height: 100vh;
     overflow: auto;
-  `}
+  `)}
 `
 
 export const Content = styled.div`
-  ${mediaQuery.greaterThan('sidebar')`
+  ${mq.above('sidebar', css`
     padding: 40px;
-  `}
+  `)}
 
-  ${mediaQuery.lessThan('sidebar')`
+  ${mq.below('sidebar', css`
     padding: 20px;
-  `}
+  `)}
 `

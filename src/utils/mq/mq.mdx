@@ -1,0 +1,39 @@
+---
+name: mq
+route: /mq
+---
+
+# mq
+
+mq is a utility for handling media queries with styled-components.
+
+```js
+import styled, { css } from 'styled-components'
+import { mq } from 'polvokit'
+
+const MyComponent = styled.div`
+  ${mq.above('medium', css`
+    display: block;
+  `)}
+
+  ${mq.between('small', 'medium', css`
+    display: flex;
+  `)}
+
+  ${mq.below('small', css`
+    display: none;
+  `)}
+`
+```
+
+These breakpoints are set in the theme, under the breakpoints key.
+
+However, you can use literal breakpoints too:
+
+```js
+const MyComponent = styled.div`
+  ${mq.above('1200px', css`
+    background-color: hotpink;
+  `}
+`
+```

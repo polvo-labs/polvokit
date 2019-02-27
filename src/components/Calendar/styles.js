@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { ifProp, ifNotProp } from 'styled-tools'
 import theme from '../../utils/theme'
-import mediaQuery from '../../utils/mediaQuery'
+import { mq } from '../..'
 
 export const Container = styled.div`
   border: 1px solid ${theme('colors.control')};
@@ -39,9 +39,9 @@ export const HeaderButton = styled.button.attrs({
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125)
   }
 
-  ${mediaQuery.lessThan('small')`
+  ${mq.below('small', css`
     padding: 0 10px;
-  `}
+  `)}
 `
 
 export const HeaderInfo = styled.div`
@@ -55,9 +55,9 @@ export const HeaderInfo = styled.div`
   font-family: ${theme('fonts.primary')};
   font-size: 16px;
 
-  ${mediaQuery.lessThan('small')`
+  ${mq.below('small', css`
     font-size: 14px;
-  `}
+  `)}
 `
 
 export const Weekdays = styled.div`
@@ -76,13 +76,13 @@ export const Weekday = styled.div`
   font-family: ${theme('fonts.primary')};
   font-size: 14px;
 
-  ${mediaQuery.lessThan('small')`
+  ${mq.below('small', css`
     font-size: 0;
 
     &:first-letter {
       font-size: 12px;
     }
-  `}
+  `)}
 `
 
 export const Grid = styled.div`
@@ -113,11 +113,11 @@ export const Day = styled.button`
   font-size: 16px;
   flex-shrink: 0;
 
-  ${mediaQuery.lessThan('small')`
+  ${mq.below('small', css`
     font-size: 12px;
     width: 20px;
     height: 20px;
-  `}
+  `)}  
 
   ${ifProp('isAdjacentMonth', css`
     color: ${theme('colors.placeholder')};

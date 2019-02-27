@@ -4,9 +4,9 @@ import objectPath from 'object-path'
 import { isBefore, isAfter, isSameDay } from 'date-fns'
 import InputDatePicker from '../InputDatePicker'
 import { Container } from './styles'
-import formatDate from 'src/utils/formatDate'
-import parseDate from 'src/utils/parseDate'
-import maskDate from 'src/utils/maskDate'
+import formatDate from '../../utils/formatDate'
+import parseDate from '../../utils/parseDate'
+import maskDate from '../../utils/maskDate'
 
 function InputDateRangePicker (props) {
   const {

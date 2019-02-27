@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { ifProp } from 'styled-tools'
-import mediaQuery from '../../utils/mediaQuery'
+import { mq } from '../..'
 import theme from '../../utils/theme'
 
 export const Menu = styled.nav`
@@ -8,7 +8,7 @@ export const Menu = styled.nav`
   flex-direction: column;
   flex-grow: 1;
 
-  ${mediaQuery.lessThan('sidebar')`
+  ${mq.below('sidebar', css`
     display: none;
     position: absolute;
     top: 100%;
@@ -20,7 +20,7 @@ export const Menu = styled.nav`
     box-sizing: border-box;
 
     ${ifProp('open', 'display: block;')}
-  `}
+  `)}
 `
 
 export const MenuButton = styled.button`
@@ -29,7 +29,7 @@ export const MenuButton = styled.button`
   cursor: pointer;
   font-size: 30px;
 
-  ${mediaQuery.greaterThan('sidebar')`
+  ${mq.above('sidebar', css`
     display: none;
-  `}
+  `)}
 `

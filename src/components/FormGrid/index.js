@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import mediaQuery from '../../utils/mediaQuery'
+import styled, { css } from 'styled-components'
+import { mq } from '../..'
 
 export default function FormGrid (props) {
   return <Grid {...props} />
@@ -23,7 +23,7 @@ FormGrid.defaultProps = {
 }
 
 export const Grid = styled.div`
-  ${props => mediaQuery.greaterThan(props.breakpoint)`
+  ${props => mq.above(props.breakpoint, css`
     display: flex;
     align-items: ${props => props.alignItems};
     justify-content: space-between;
@@ -40,11 +40,11 @@ export const Grid = styled.div`
         margin-right: 0;
       }
     }
-  `}
+  `)(props)}
 
-  ${props => mediaQuery.lessThan(props.breakpoint)`
+  ${props => mq.below(props.breakpoint, css`
     > * + * {
       margin-top: 20px;
     }
-  `}
+  `)(props)};
 `

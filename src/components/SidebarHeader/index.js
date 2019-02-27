@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
-import mediaQuery from '../../utils/mediaQuery'
+import styled, { css } from 'styled-components'
+import { mq } from '../..'
 
 export default function SidebarHeader (props) {
   return (
@@ -9,13 +9,13 @@ export default function SidebarHeader (props) {
 }
 
 const Header = styled.header`
-  ${mediaQuery.greaterThan('sidebar')`
+  ${mq.above('sidebar', css`
     padding: 20px 30px;
     margin-bottom: 15px;
-  `}
+  `)}
 
-  ${mediaQuery.lessThan('sidebar')`
+  ${mq.below('sidebar', css`
     width: 150px;
     flex-shrink: 0;
-  `}
+  `)}
 `
