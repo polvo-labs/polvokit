@@ -2,7 +2,13 @@
 
 Polvokit is a React-based UI library developed and maintained by Polvo.
 
-Check out the [documentation](https://polvo-labs.github.io/polvokit/)
+Check out the [documentation](https://polvo-labs.github.io/polvokit/).
+
+## Stack
+
+- react
+- styled-components
+- react-router
 
 ## Installation
 
@@ -55,6 +61,7 @@ function Example () {
 - [ ] Panel
 - [ ] Card
 - [ ] Text
+- [ ] Link
 - [ ] Box
 - [ ] FileUploader
 - [ ] Modal
