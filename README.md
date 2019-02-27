@@ -55,14 +55,13 @@ function Example () {
 - [x] Textarea
 - [x] VerticalSpacer
 - [x] Text
-- [ ] Link
+- [x] Link
 - [ ] Checkbox
 - [ ] Radio
 - [ ] Switch
 - [ ] Table
 - [ ] Panel
 - [ ] Card
-- [ ] Link
 - [ ] Box
 - [ ] FileUploader
 - [ ] Modal

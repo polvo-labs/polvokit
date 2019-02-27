@@ -1,0 +1,72 @@
+---
+name: Link
+route: /link
+---
+
+import { Playground, PropsTable } from 'docz'
+import { MemoryRouter } from 'react-router-dom'
+import Link from '.'
+
+# Link
+
+<Playground>
+  <MemoryRouter>
+    <Link to='/'>Link</Link>
+  </MemoryRouter>
+</Playground>
+
+You can change the color and font size:
+
+<Playground>
+  <MemoryRouter>
+    <div>
+      <Link to='/'>Primary</Link>
+      <Link to='/' color='success'>Success</Link>
+      <Link to='/' color='danger'>Danger</Link>
+      <Link to='/' color='warning'>Warning</Link>
+      <div style={{ marginTop: 30 }}>
+        <Link to='/' fontSize='24px'>
+          Huge Link
+        </Link>
+      </div>
+    </div>
+  </MemoryRouter>
+</Playground>
+
+## Custom components
+
+By default, it renders a react-router's Link component.
+If you want to use `<a>` or `<button>` instead, you can use
+the prop `as`:
+
+<Playground>
+  <Link as='a' href='#'>
+    I'm an anchor
+  </Link>
+  <Link as='button'>
+    I'm a button
+  </Link>
+</Playground>
+
+## Usage
+
+```js
+import { Link } from 'polvokit'
+
+// By default, it renders a react-router's Link
+<Link to='/'>
+  Home
+</Link>
+
+<Link as='a' href='https://example.com'>
+  Example.com
+</Link>
+
+<Link as='button'>
+  Click me
+</Link>
+```
+
+## Props
+
+<PropsTable of={Link} />
