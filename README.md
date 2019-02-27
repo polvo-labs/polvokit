@@ -60,6 +60,7 @@ function Example () {
 - [ ] Radio
 - [ ] Switch
 - [ ] Table
+- [ ] Spinner
 - [ ] Panel
 - [ ] Card
 - [ ] Box
