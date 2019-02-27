@@ -1,0 +1,42 @@
+---
+name: Radio
+route: /radio
+---
+
+import { Playground, PropsTable } from 'docz'
+import { VerticalSpacer, Option } from '../..'
+import Radio from '.'
+
+# Radio
+
+Just an alias for `<Option type='radio' {...props} />`.
+
+<Playground>
+  <VerticalSpacer>
+    <Radio
+      name='radio'
+      label='Check it'
+    />
+    <Radio
+      name='radio'
+      label='Checked input'
+      defaultChecked
+    />
+  </VerticalSpacer>
+</Playground>
+
+## Usage
+
+```js
+import { Radio } from 'polvokit'
+
+<Radio
+  label='Radio label'
+/>
+```
+
+## Props
+
+It supports all props from `<input />`, plus:
+
+<PropsTable of={Option} />

@@ -15,6 +15,7 @@ export { default as InputDateRangePicker } from './components/InputDateRangePick
 export { default as Link } from './components/Link'
 export { default as Option } from './components/Option'
 export { default as PolvoLogo } from './components/PolvoLogo'
+export { default as Radio } from './components/Radio'
 export { default as Select } from './components/Select'
 export { default as Text } from './components/Text'
 export { default as Textarea } from './components/Textarea'
