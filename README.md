@@ -1,16 +1,62 @@
-# polvokit
+# Polvokit
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+Polvokit is a React-based UI library developed and maintained by Polvo.
 
-Describe polvokit here.
+Check out the [documentation](https://polvo-labs.github.io/polvokit/)
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+## Installation
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+```
+yarn add polvokit
+```
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+## Usage
+
+Just import the components you want to use.
+You don't need to include any global CSS. Just import the components:
+
+```js
+import { Button, Icon, Panel } from 'polvokit'
+
+function Example () {
+  return (
+    <Panel header='My Panel'>
+      <Button before={<Icon icon='home' />}>
+        Click me
+      </Button>
+    </Panel>    
+  )
+}
+```
+
+## Roadmap
+
+- [x] BackButton
+- [x] Badge
+- [x] Button
+- [x] Calendar
+- [x] DashboardLayout
+- [x] FormGrid
+- [x] FormGroup
+- [x] Icon
+- [x] Image
+- [x] Input
+- [x] InputDatePicker
+- [x] InputDateRangePicker
+- [x] Pagination
+- [x] PolvoLogo
+- [x] Select
+- [x] Textarea
+- [x] VerticalSpacer
+- [ ] Checkbox
+- [ ] Radio
+- [ ] Switch
+- [ ] Table
+- [ ] Panel
+- [ ] Card
+- [ ] Text
+- [ ] Box
+- [ ] FileUploader
+- [ ] Modal
+- [ ] ButtonGroup
+- [ ] Theme overriding
