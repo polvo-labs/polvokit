@@ -5,6 +5,7 @@ route: /calendar
 
 import { Playground, PropsTable } from 'docz'
 import { Value } from 'react-values'
+import { isBefore, isSameDay } from 'date-fns'
 import Calendar from '.'
 
 # Calendar
@@ -42,19 +43,31 @@ You can disable some days by using the `isDaySelectable` prop:
   </Value>
 </Playground>
 
+### Range
+
+By using the prop `isDayWithinRange`, you can specify
+a range area of days in your calendar.
+
+This feature is use in the `InputDatePicker` component.
+
+<Playground>
+  <Calendar
+    onChange={() => null}
+    isDayWithinRange={(date, hoveredDate) => {
+      return date.getDate() >= 10 && date.getDate() <= 20
+    }}
+  />
+</Playground>
+
 ## Usage
 
 ```js
 import { Calendar } from 'polvokit'
 
-function Example () {
-  return (
-    <Calendar
-      value={new Date()} // selected date
-      onChange={onChange} // change handler
-    />
-  )
-}
+<Calendar
+  value={new Date()} // selected date
+  onChange={onChange} // change handler
+/>
 ```
 
 ## Props

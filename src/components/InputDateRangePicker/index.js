@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import objectPath from 'object-path'
-import { isBefore, isAfter } from 'date-fns'
+import { isBefore, isAfter, isSameDay } from 'date-fns'
 import InputDatePicker from '../InputDatePicker'
 import { Container } from './styles'
 import formatDate from 'src/utils/formatDate'
@@ -26,7 +26,7 @@ function InputDateRangePicker (props) {
       return true
     }
 
-    return isBefore(date, end)
+    return isBeforeOrEqual(date, end)
   }
 
   const isValidEnd = date => {
@@ -34,7 +34,7 @@ function InputDateRangePicker (props) {
       return true
     }
 
-    return isAfter(date, start)
+    return isAfterOrEqual(date, start)
   }
 
   return (
@@ -49,6 +49,7 @@ function InputDateRangePicker (props) {
         }}
         calendarProps={{
           isDaySelectable: isValidStart,
+          isDayWithinRange: checkRangeStart(start, end),
           ...calendarProps
         }}
         {...inputStartProps}
@@ -64,6 +65,7 @@ function InputDateRangePicker (props) {
         }}
         calendarProps={{
           isDaySelectable: isValidEnd,
+          isDayWithinRange: checkRangeEnd(start, end),
           ...calendarProps
         }}
         {...inputEndProps}
@@ -111,3 +113,59 @@ InputDateRangePicker.defaultProps = {
 }
 
 export default InputDateRangePicker
+
+const isAfterOrEqual = (date1, date2) =>
+  isAfter(date1, date2) ||
+  isSameDay(date1, date2)
+
+const isBeforeOrEqual = (date1, date2) =>
+  isBefore(date1, date2) ||
+  isSameDay(date1, date2)
+
+const checkRangeEnd = (start, end) => (date, hoveredDate) => {
+  if (isSameDay(date, start)) {
+    return true
+  }
+
+  if (start) {
+    if (hoveredDate) {
+      const result = isAfterOrEqual(date, start) &&
+        isBeforeOrEqual(date, hoveredDate)
+
+      if (result) {
+        return true
+      }
+    }
+
+    if (end) {
+      return isAfterOrEqual(date, start) &&
+        isBeforeOrEqual(date, end)
+    }
+  }
+
+  return false
+}
+
+const checkRangeStart = (start, end) => (date, hoveredDate) => {
+  if (isSameDay(date, end)) {
+    return true
+  }
+
+  if (end) {
+    if (hoveredDate) {
+      const result = isBeforeOrEqual(date, end) &&
+        isAfterOrEqual(date, hoveredDate)
+
+      if (result) {
+        return true
+      }
+    }
+
+    if (start) {
+      return isBeforeOrEqual(date, end) &&
+        isAfterOrEqual(date, start)
+    }
+  }
+
+  return false
+}

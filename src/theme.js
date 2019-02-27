@@ -2,6 +2,7 @@ export default {
   colors: {
     default: '#d1d8e0',
     primary: '#34ace0',
+    primaryLight: '#caf2ff',
     success: '#05c46b',
     warning: '#ffa801',
     danger: '#eb2f06',

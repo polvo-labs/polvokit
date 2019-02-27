@@ -88,13 +88,16 @@ export const Weekday = styled.div`
 export const Grid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding: 5px 0;
 `
 
 export const Cell = styled.div`
   display: flex;
   justify-content: center;
   width: ${1 / 7 * 100}%;
+
+  ${ifProp('active', css`
+    background-color: ${theme('colors.primaryLight')};
+  `)}
 `
 
 export const Day = styled.button`

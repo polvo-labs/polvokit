@@ -54,6 +54,7 @@ export const Before = styled.div`
   bottom: 0;
   width: 35px;
   pointer-events: none;
+  color: ${theme('colors.light')};
   
   + ${InputStyled} {
     padding-left: 35px;

@@ -26,10 +26,12 @@ function Calendar (props) {
     onChange,
     formatHeaderDisplay,
     formatWeekday,
-    isDaySelectable
+    isDaySelectable,
+    isDayWithinRange
   } = props
 
   const [ displayDate, setDisplayDate ] = useState(value || new Date())
+  const [ hoveredDate, setHoveredDate ] = useState(null)
 
   useEffect(() => {
     if (value && !isSameMonth(displayDate, value)) {
@@ -69,7 +71,16 @@ function Calendar (props) {
         {days.map(date => {
           const isDisabled = !isDaySelectable(date)
           return (
-            <Cell key={date.toString()}>
+            <Cell
+              key={date.toString()}
+              active={isDayWithinRange(date, hoveredDate)}
+              onMouseEnter={() => {
+                setHoveredDate(date)
+              }}
+              onMouseLeave={() => {
+                setHoveredDate(null)
+              }}
+            >
               <Day
                 isAdjacentMonth={!isSameMonth(displayDate, date)}
                 isToday={isToday(date)}
@@ -109,7 +120,10 @@ Calendar.propTypes = {
   formatHeaderDisplay: PropTypes.func,
 
   /** Whether the day is selectable */
-  isDaySelectable: PropTypes.func
+  isDaySelectable: PropTypes.func,
+
+  /** Whether the day in within a range */
+  isDayWithinRange: PropTypes.func
 }
 
 Calendar.defaultProps = {
@@ -118,7 +132,8 @@ Calendar.defaultProps = {
   isDaySelectable: date => true,
   formatWeekday: utils.formatWeekday,
   formatHeaderDisplay: date =>
-    `${utils.formatMonth(date)} - ${date.getFullYear()}`
+    `${utils.formatMonth(date)} - ${date.getFullYear()}`,
+  isDayWithinRange: date => false
 }
 
 export default Calendar
