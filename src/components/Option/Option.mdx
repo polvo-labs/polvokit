@@ -1,0 +1,64 @@
+---
+name: Option
+route: /option
+---
+
+import { Playground, PropsTable } from 'docz'
+import { VerticalSpacer } from '../..'
+import Option from '.'
+
+# Option
+
+A form component that can renders either a checkbox or a radio control.
+
+<Playground>
+  <VerticalSpacer>
+    <Option
+      type='checkbox'
+      label='Check it'
+    />
+    <Option
+      type='checkbox'
+      label='Checked input'
+      defaultChecked
+    />
+  </VerticalSpacer>
+</Playground>
+
+<Playground>
+  <VerticalSpacer>
+    <Option
+      name='radio'
+      type='radio'
+      label='Check it'
+    />
+    <Option
+      name='radio'
+      type='radio'
+      label='Checked input'
+      defaultChecked
+    />
+  </VerticalSpacer>
+</Playground>
+
+## Usage
+
+```js
+import { Option } from 'polvokit'
+
+<Option
+  type='checkbox'
+  label='A checkbox label'
+/>
+
+<Option
+  type='radio'
+  label='A radio label'
+/>
+```
+
+## Props
+
+It supports all props from `<input />`, plus:
+
+<PropsTable of={Option} />
