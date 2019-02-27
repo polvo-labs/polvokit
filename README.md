@@ -54,13 +54,14 @@ function Example () {
 - [x] Select
 - [x] Textarea
 - [x] VerticalSpacer
+- [x] Text
+- [ ] Link
 - [ ] Checkbox
 - [ ] Radio
 - [ ] Switch
 - [ ] Table
 - [ ] Panel
 - [ ] Card
-- [ ] Text
 - [ ] Link
 - [ ] Box
 - [ ] FileUploader
