@@ -1,0 +1,40 @@
+---
+name: Checkbox
+route: /checkbox
+---
+
+import { Playground, PropsTable } from 'docz'
+import { VerticalSpacer, Option } from '../..'
+import Checkbox from '.'
+
+# Checkbox
+
+Just an alias for `<Option type='checkbox' {...props} />`.
+
+<Playground>
+  <VerticalSpacer>
+    <Checkbox
+      label='Check it'
+    />
+    <Checkbox
+      label='Checked input'
+      defaultChecked
+    />
+  </VerticalSpacer>
+</Playground>
+
+## Usage
+
+```js
+import { Checkbox } from 'polvokit'
+
+<Checkbox
+  label='Checkbox label'
+/>
+```
+
+## Props
+
+It supports all props from `<input />`, plus:
+
+<PropsTable of={Option} />

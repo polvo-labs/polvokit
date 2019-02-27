@@ -58,7 +58,7 @@ function Example () {
 - [x] Link
 - [x] mq utility
 - [x] Option
-- [ ] Checkbox
+- [x] Checkbox
 - [ ] Radio
 - [ ] Switch
 - [ ] Table
