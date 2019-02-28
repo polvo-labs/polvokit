@@ -61,6 +61,7 @@ function Example () {
 - [x] Checkbox
 - [x] Radio
 - [x] Spinner
+- [x] ButtonGroup
 - [ ] Switch
 - [ ] Table
 - [ ] Panel
@@ -68,5 +69,4 @@ function Example () {
 - [ ] Box
 - [ ] FileUploader
 - [ ] Modal
-- [ ] ButtonGroup
 - [ ] Theme overriding

@@ -1,0 +1,88 @@
+---
+name: ButtonGroup
+route: /button-group
+---
+
+import { Playground, PropsTable } from 'docz'
+import Button from '../Button'
+import ButtonGroup from '.'
+
+# ButtonGroup
+
+<Playground>
+  <ButtonGroup>
+    <Button appearance='success'>
+      Success
+    </Button>
+    <Button appearance='warning'>
+      Warning
+    </Button>
+    <Button appearance='danger'>
+      Danger
+    </Button>
+  </ButtonGroup>
+</Playground>
+
+Fill:
+
+<Playground>
+  <ButtonGroup fill>
+    <Button appearance='success'>
+      Success
+    </Button>
+    <Button appearance='warning'>
+      Warning
+    </Button>
+    <Button appearance='danger'>
+      Danger
+    </Button>
+  </ButtonGroup>
+</Playground>
+
+Stack:
+
+<Playground>
+  <ButtonGroup stack>
+    <Button appearance='success'>
+      Success
+    </Button>
+    <Button appearance='warning'>
+      Warning
+    </Button>
+    <Button appearance='danger'>
+      Danger
+    </Button>
+  </ButtonGroup>
+</Playground>
+
+Stack at certain breakpoint:
+
+<Playground>
+  <ButtonGroup stackAt='medium'>
+    <Button appearance='success'>
+      Success
+    </Button>
+    <Button appearance='warning'>
+      Warning
+    </Button>
+    <Button appearance='danger'>
+      Danger
+    </Button>
+  </ButtonGroup>
+</Playground>
+
+## Usage
+
+```js
+import { Button, ButtonGroup } from 'polvokit'
+
+<ButtonGroup>
+  <Button>...</Button>
+  <Button>...</Button>
+  <Button>...</Button>
+</ButtonGroup>
+```
+
+## Props
+
+<PropsTable of={ButtonGroup} />
