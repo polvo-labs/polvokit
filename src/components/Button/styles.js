@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { darken } from 'polished'
-import { ifProp } from 'styled-tools'
+import { ifProp, switchProp } from 'styled-tools'
 import theme from '../../utils/theme'
 import { mq } from '../..'
 
@@ -14,16 +14,32 @@ export const ButtonStyled = styled.button`
   align-items: center;
   justify-content: center;
   height: ${theme('dimensions.controlHeight')};
-  padding: 0 15px;
   background-color: ${p => theme(`colors.${p.appearance}`)};
   color: ${p => p.appearance === 'default' ? '#000' : '#fff'};
   cursor: pointer;
   border: none;
   border-radius: 3px;
   font-family: ${theme('fonts.primary')};
-  font-size: 16px;
   text-decoration: none;
   box-sizing: border-box;
+
+  ${switchProp('size', {
+    small: css`
+      font-size: 14px;
+      padding: 0 15px;
+      height: 30px;
+    `,
+    default: css`
+      padding: 0 15px;    
+      font-size: 16px;
+      height: ${theme('dimensions.controlHeight')};
+    `,
+    large: css`
+      padding: 0 30px;
+      font-size: 18px;
+      height: 60px;
+    `
+  })};
 
   ${ifProp('full', fullCss)}
   

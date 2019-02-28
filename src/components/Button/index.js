@@ -28,6 +28,13 @@ Button.propTypes = {
   /** Appearance */
   appearance: PropTypes.oneOf(Object.keys(theme.colors)),
 
+  /** Size */
+  size: PropTypes.oneOf([
+    'small',
+    'default',
+    'large'
+  ]),
+
   /** Before */
   before: PropTypes.element,
 
@@ -46,6 +53,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   appearance: 'default',
+  size: 'default',
   loading: false,
   full: false
 }
