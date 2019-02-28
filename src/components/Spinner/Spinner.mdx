@@ -1,0 +1,50 @@
+---
+name: Spinner
+route: /spinner
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Value } from 'react-values'
+import Spinner from '.'
+
+# Spinner
+
+<Playground>
+  <Spinner />
+</Playground>
+
+It's possible to define the spinner's size:
+
+<Playground>
+  <Value defaultValue={Spinner.defaultProps.size}>
+    {({ value, set }) => (
+      <div>
+        <input
+          type='range'
+          min={1}
+          max={100}
+          value={value}
+          onChange={e => set(e.target.value)}
+        />
+        <p>
+          {value}%
+        </p>
+        <Spinner
+          size={value}
+        />
+      </div>
+    )}
+  </Value>
+</Playground>
+
+## Usage
+
+```js
+import { Spinner } from 'polvokit'
+
+<Spinner />
+```
+
+## Props
+
+<PropsTable of={Spinner} />

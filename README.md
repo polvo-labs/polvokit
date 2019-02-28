@@ -60,9 +60,9 @@ function Example () {
 - [x] Option
 - [x] Checkbox
 - [x] Radio
+- [x] Spinner
 - [ ] Switch
 - [ ] Table
-- [ ] Spinner
 - [ ] Panel
 - [ ] Card
 - [ ] Box
