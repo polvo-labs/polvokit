@@ -3,7 +3,7 @@ import { switchProp } from 'styled-tools'
 import { getTheme } from '../..'
 
 export const Container = styled.label`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
 `
@@ -22,11 +22,13 @@ export const Check = styled.div`
     radio: '100%'
   })};
   margin-right: 10px;
+  font-size: 14px;
   box-sizing: border-box;
+  background-color: #fff;
   transition: 0.2s ease all;
 
   > :first-child {
-    display: none;
+    visibility: hidden;
   }
 `
 
@@ -41,7 +43,7 @@ export const Input = styled.input`
     background-color: ${getTheme('colors.success')};
     border-color: ${getTheme('colors.success')};
     > :first-child {
-      display: block;
+      visibility: visible;
     }
   }
 `

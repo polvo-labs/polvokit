@@ -17,18 +17,22 @@ function Option (props) {
   } = props
 
   return (
-    <Container>
-      <Input
-        type={type}
-        {...rest}
-      />
-      <Check type={type}>
-        <Icon icon='check' />
-      </Check>
-      <Text {...labelProps}>
-        {label}
-      </Text>
-    </Container>
+    <div>
+      <Container>
+        <Input
+          type={type}
+          {...rest}
+        />
+        <Check type={type}>
+          <div>
+            <Icon icon='check' />
+          </div>
+        </Check>
+        <Text {...labelProps}>
+          {label}
+        </Text>
+      </Container>
+    </div>
   )
 }
 
