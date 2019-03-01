@@ -1,36 +1,36 @@
 import styled from 'styled-components'
-import theme from '../../utils/theme'
+import { getTheme } from '../..'
 
 export const Container = styled.div`
-  font-family: ${theme('fonts.primary')};
+  font-family: ${getTheme('fonts.primary')};
   text-align: left;
   
   .react-select__container {
-    height: ${theme('dimensions.controlHeight')};
+    height: ${getTheme('dimensions.controlHeight')};
   }
 
   .react-select__control {
-    height: ${theme('dimensions.controlHeight')};
+    height: ${getTheme('dimensions.controlHeight')};
     padding: 0 5px;
     border-width: 1px;
     font-size: 16px;
-    border-color: ${theme('colors.control')};
+    border-color: ${getTheme('colors.control')};
     background-color: #fff;
     box-shadow: none;
 
     &:hover {
-      border-color: ${theme('colors.control')};
+      border-color: ${getTheme('colors.control')};
     }
   }
 
   .react-select__control--is-focused,
   .react-select__control--is-focused:hover {
-    border-color: ${theme('colors.primary')};
-    box-shadow: 0 0 1px ${theme('colors.primary')};
+    border-color: ${getTheme('colors.primary')};
+    box-shadow: 0 0 1px ${getTheme('colors.primary')};
   }
 
   .react-select__placeholder {
-    color: ${theme('colors.placeholder')};
+    color: ${getTheme('colors.placeholder')};
   }
   
   .react-select__option {
@@ -39,6 +39,6 @@ export const Container = styled.div`
   }
  
   .react-select__option--is-selected {
-    background-color: ${theme('colors.primary')};
+    background-color: ${getTheme('colors.primary')};
   }
 `

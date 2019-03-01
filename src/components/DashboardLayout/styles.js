@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle, css } from 'styled-components'
-import theme from '../../utils/theme'
-import { mq } from '../..'
+import { mq, getTheme } from '../..'
 
 export const GlobalStyles = createGlobalStyle`
   body {
@@ -18,13 +17,13 @@ export const Container = styled.div`
 
 export const Sidebar = styled.aside`
   box-sizing: border-box;
-  background-color: ${theme('colors.sidebar')};
+  background-color: ${getTheme('colors.sidebar')};
   position: relative;
 
   ${mq.above('sidebar', css`
     display: flex;
     flex-direction: column;
-    width: ${theme('dimensions.sidebarWidth')};
+    width: ${getTheme('dimensions.sidebarWidth')};
     flex-shrink: 0;
     padding: 15px;
     height: 100vh;
@@ -40,7 +39,7 @@ export const Sidebar = styled.aside`
 `
 
 export const ContentWrapper = styled.div`
-  font-family: ${theme('fonts.primary')};
+  font-family: ${getTheme('fonts.primary')};
   box-sizing: border-box;
 
   ${mq.above('sidebar', css`

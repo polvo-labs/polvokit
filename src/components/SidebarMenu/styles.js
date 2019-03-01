@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ifProp } from 'styled-tools'
-import { mq } from '../..'
-import theme from '../../utils/theme'
+import { mq, getTheme } from '../..'
 
 export const Menu = styled.nav`
   display: flex;
@@ -15,8 +14,8 @@ export const Menu = styled.nav`
     left: 0;
     width: 100%;
     padding: 20px;
-    background-color: ${theme('colors.sidebar')};
-    z-index: ${theme('stacks.high')};
+    background-color: ${getTheme('colors.sidebar')};
+    z-index: ${getTheme('stacks.high')};
     box-sizing: border-box;
 
     ${ifProp('open', 'display: block;')}

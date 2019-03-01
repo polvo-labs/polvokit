@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components'
 import { ifProp } from 'styled-tools'
-import theme from '../../utils/theme'
+import { getTheme } from '../..'
 
 const focusCss = css`
-  border-color: ${theme('colors.primary')};
-  box-shadow: 0 0 1px ${theme('colors.primary')};
+  border-color: ${getTheme('colors.primary')};
+  box-shadow: 0 0 1px ${getTheme('colors.primary')};
 `
 
 export const Container = styled.div`
@@ -17,15 +17,15 @@ export const Container = styled.div`
 export const InputStyled = styled.input`
   display: flex;
   width: 100%;
-  height: ${theme('dimensions.controlHeight')};
+  height: ${getTheme('dimensions.controlHeight')};
   background-color: #fff;
   box-sizing: border-box; 
-  font-family: ${theme('fonts.primary')};
+  font-family: ${getTheme('fonts.primary')};
   font-size: 16px;
-  color: ${theme('colors.text')};
+  color: ${getTheme('colors.text')};
   padding: 0 10px;
   border-radius: 3px;
-  border: 1px solid ${theme('colors.control')};
+  border: 1px solid ${getTheme('colors.control')};
 
   ${ifProp('focused', focusCss)}
 
@@ -35,12 +35,12 @@ export const InputStyled = styled.input`
   
   &[disabled] {
     cursor: not-allowed;
-    background: ${theme('colors.disabled')};
+    background: ${getTheme('colors.disabled')};
   }
   
   &::placeholder {
     opacity: 1;
-    color: ${theme('colors.placeholder')};
+    color: ${getTheme('colors.placeholder')};
   }
 `
 
@@ -54,7 +54,7 @@ export const Before = styled.div`
   bottom: 0;
   width: 35px;
   pointer-events: none;
-  color: ${theme('colors.text')};
+  color: ${getTheme('colors.text')};
 
   + ${InputStyled} {
     padding-left: 35px;

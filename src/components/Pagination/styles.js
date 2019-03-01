@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { ifProp } from 'styled-tools'
-import theme from '../../utils/theme'
+import { getTheme } from '../..'
 
 export const Container = styled.div`
   ${ifProp('center', 'text-align: center;')}
@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const Paginator = styled.div`
   display: inline-flex;
   align-items: center;
-  border: 1px solid ${theme('colors.control')};
+  border: 1px solid ${getTheme('colors.control')};
   border-radius: 3px;
 `
 
@@ -17,20 +17,20 @@ export const Button = styled.button.attrs({
   type: 'button'
 })`
   cursor: pointer;
-  height: ${theme('dimensions.controlHeight')};
+  height: ${getTheme('dimensions.controlHeight')};
   padding: 0 10px;
   border: none;
   background-color: transparent;
-  color: ${theme('colors.primary')};
+  color: ${getTheme('colors.primary')};
 
   &[disabled] {
     cursor: not-allowed;
-    color: ${theme('colors.control')};
+    color: ${getTheme('colors.control')};
   }
 
   &:not([disabled]):hover,
   &:not([disabled]):active {
-    background-color: ${theme('colors.light')};
+    background-color: ${getTheme('colors.light')};
   }
 
   &:not([disabled]):active {
@@ -42,12 +42,12 @@ export const Current = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${theme('colors.text')};
-  font-family: ${theme('fonts.primary')};
+  color: ${getTheme('colors.text')};
+  font-family: ${getTheme('fonts.primary')};
   font-size: 16px;
   flex-grow: 1;
   width: 150px;
-  height: ${theme('dimensions.controlHeight')};
-  border-left: 1px solid ${theme('colors.control')};
-  border-right: 1px solid ${theme('colors.control')};
+  height: ${getTheme('dimensions.controlHeight')};
+  border-left: 1px solid ${getTheme('colors.control')};
+  border-right: 1px solid ${getTheme('colors.control')};
 `

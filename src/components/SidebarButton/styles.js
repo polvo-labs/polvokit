@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../utils/theme'
+import { getTheme } from '../..'
 
 export const ButtonStyled = styled.button`
   display: flex;
@@ -8,9 +8,9 @@ export const ButtonStyled = styled.button`
   cursor: pointer;
   background-color: transparent;
   border: none;
-  font-family: ${theme('fonts.primary')};
+  font-family: ${getTheme('fonts.primary')};
   font-size: 14px;
-  color: ${theme('colors.sidebarButtonColor')};
+  color: ${getTheme('colors.sidebarButtonColor')};
   text-decoration: none;
   box-sizing: border-box;
   border-radius: 3px;
@@ -24,5 +24,5 @@ export const ButtonStyled = styled.button`
 
 export const Before = styled.span`
   margin-right: 10px;
-  color: ${theme('colors.sidebarButtonBeforeColor')};
+  color: ${getTheme('colors.sidebarButtonBeforeColor')};
 `

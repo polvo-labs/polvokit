@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ifProp } from 'styled-tools'
-import theme from '../../utils/theme'
+import { getTheme } from '../..'
 
 export const Container = styled.div`
   position: relative;
@@ -15,7 +15,7 @@ export const CalendarWrapper = styled.div`
   transition: 0.2s ease all, 0s visibility;
   transition-delay: 0.1s;
   position: absolute;
-  z-index: ${theme('stacks.control')};
+  z-index: ${getTheme('stacks.control')};
 
   ${ifProp('show', css`
     visibility: visible;

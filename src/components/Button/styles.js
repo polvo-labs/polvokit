@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components'
 import { darken } from 'polished'
 import { ifProp, switchProp } from 'styled-tools'
-import theme from '../../utils/theme'
-import { mq } from '../..'
+import { mq, getTheme } from '../..'
 
 const fullCss = css`
   display: flex;
@@ -13,13 +12,13 @@ export const ButtonStyled = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: ${theme('dimensions.controlHeight')};
-  background-color: ${p => theme(`colors.${p.appearance}`)};
+  height: ${getTheme('dimensions.controlHeight')};
+  background-color: ${p => getTheme(`colors.${p.appearance}`)};
   color: ${p => p.appearance === 'default' ? '#000' : '#fff'};
   cursor: pointer;
   border: none;
   border-radius: 3px;
-  font-family: ${theme('fonts.primary')};
+  font-family: ${getTheme('fonts.primary')};
   text-decoration: none;
   box-sizing: border-box;
 
@@ -32,7 +31,7 @@ export const ButtonStyled = styled.button`
     default: css`
       padding: 0 15px;    
       font-size: 16px;
-      height: ${theme('dimensions.controlHeight')};
+      height: ${getTheme('dimensions.controlHeight')};
     `,
     large: css`
       padding: 0 30px;
@@ -51,7 +50,7 @@ export const ButtonStyled = styled.button`
 
   &:not([disabled]):hover,
   &:not([disabled]):active {
-    background-color: ${p => theme(`colors.${p.appearance}`, darken(0.05))};
+    background-color: ${p => getTheme(`colors.${p.appearance}`, darken(0.05))};
   }
 
   &:not([disabled]):active {

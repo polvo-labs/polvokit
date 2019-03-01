@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { ifProp } from 'styled-tools'
-import theme from '../../utils/theme'
+import { getTheme } from '../..'
 
 export const Container = styled.section`
   ${ifProp('bottom', 'margin-top: auto;')}
@@ -13,8 +13,8 @@ export const Container = styled.section`
 export const Title = styled.h2`
   display: block;
   font-size: 10px;
-  font-family: ${theme('fonts.primary')};
-  color: ${theme('colors.textLight')};
+  font-family: ${getTheme('fonts.primary')};
+  color: ${getTheme('colors.textLight')};
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 10px;

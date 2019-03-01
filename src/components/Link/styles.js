@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { prop } from 'styled-tools'
 import { darken } from 'polished'
-import theme from '../../utils/theme'
+import { getTheme } from '../..'
 
 export const LinkStyled = styled.a`
   display: inline-flex;
-  color: ${p => theme(`colors.${p.color}`)};
-  font-family: ${theme('fonts.primary')};
+  color: ${p => getTheme(`colors.${p.color}`)};
+  font-family: ${getTheme('fonts.primary')};
   font-size: ${prop('fontSize')};
   cursor: pointer;
   background-color: transparent;
@@ -19,6 +19,6 @@ export const LinkStyled = styled.a`
   }
 
   &:hover {
-    color: ${p => theme(`colors.${p.color}`, darken(0.1))};
+    color: ${p => getTheme(`colors.${p.color}`, darken(0.1))};
   }
 `

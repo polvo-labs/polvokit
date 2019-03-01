@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components'
 import { ifProp, ifNotProp } from 'styled-tools'
-import theme from '../../utils/theme'
-import { mq } from '../..'
+import { mq, getTheme } from '../..'
 
 export const Container = styled.div`
-  border: 1px solid ${theme('colors.control')};
+  border: 1px solid ${getTheme('colors.control')};
   border-radius: 3px;
   background-color: #fff;
 `
@@ -13,7 +12,7 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid ${theme('colors.control')};
+  border-bottom: 1px solid ${getTheme('colors.control')};
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -28,11 +27,11 @@ export const HeaderButton = styled.button.attrs({
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: ${theme('colors.primary')};
+  color: ${getTheme('colors.primary')};
 
   &:hover,
   &:active {
-    background-color: ${theme('colors.light')};
+    background-color: ${getTheme('colors.light')};
   }
 
   &:active {
@@ -50,9 +49,9 @@ export const HeaderInfo = styled.div`
   justify-content: center;
   flex-grow: 1;
   height: inherit;
-  border-left: 1px solid ${theme('colors.control')};
-  border-right: 1px solid ${theme('colors.control')};
-  font-family: ${theme('fonts.primary')};
+  border-left: 1px solid ${getTheme('colors.control')};
+  border-right: 1px solid ${getTheme('colors.control')};
+  font-family: ${getTheme('fonts.primary')};
   font-size: 16px;
 
   ${mq.below('small', css`
@@ -63,9 +62,9 @@ export const HeaderInfo = styled.div`
 export const Weekdays = styled.div`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid ${theme('colors.control')};
+  border-bottom: 1px solid ${getTheme('colors.control')};
   height: 30px;
-  background-color: ${theme('colors.light')};
+  background-color: ${getTheme('colors.light')};
 `
 
 export const Weekday = styled.div`
@@ -73,7 +72,7 @@ export const Weekday = styled.div`
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: ${theme('fonts.primary')};
+  font-family: ${getTheme('fonts.primary')};
   font-size: 14px;
 
   ${mq.below('small', css`
@@ -96,7 +95,7 @@ export const Cell = styled.div`
   width: ${1 / 7 * 100}%;
 
   ${ifProp('active', css`
-    background-color: ${theme('colors.primaryLight')};
+    background-color: ${getTheme('colors.primaryLight')};
   `)}
 `
 
@@ -109,7 +108,7 @@ export const Day = styled.button`
   border-radius: 100%;
   margin: 5px;
   padding: 0;
-  font-family: ${theme('fonts.primary')};
+  font-family: ${getTheme('fonts.primary')};
   font-size: 16px;
   flex-shrink: 0;
 
@@ -120,11 +119,11 @@ export const Day = styled.button`
   `)}  
 
   ${ifProp('isAdjacentMonth', css`
-    color: ${theme('colors.placeholder')};
+    color: ${getTheme('colors.placeholder')};
   `)}
 
   ${ifNotProp('isAdjacentMonth', css`
-    color: ${theme('colors.text')};
+    color: ${getTheme('colors.text')};
   `)}
 
   ${ifProp('isToday', css`
@@ -132,18 +131,18 @@ export const Day = styled.button`
   `)}
 
   ${ifProp('isSelected', css`
-    background-color: ${theme('colors.primary')};
+    background-color: ${getTheme('colors.primary')};
     color: #fff;
   `)}
 
   ${p => !p.isSelected && !p.isDisabled && css`
     &:hover {
-      background-color: ${theme('colors.light')};
+      background-color: ${getTheme('colors.light')};
     }
   `}
 
   ${ifProp('isDisabled', css`
     cursor: not-allowed;
-    color: ${theme('colors.danger')};
+    color: ${getTheme('colors.danger')};
   `)}
 `

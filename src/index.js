@@ -1,6 +1,6 @@
 export { default as mq } from './utils/mq'
 export { default as theme } from './theme'
-export { default as getTheme } from './utils/theme'
+export { default as getTheme } from './utils/getTheme'
 export { default as BackButton } from './components/BackButton'
 export { default as Button } from './components/Button'
 export { default as ButtonGroup } from './components/ButtonGroup'

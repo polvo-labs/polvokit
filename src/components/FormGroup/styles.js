@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import theme from '../../utils/theme'
+import { getTheme } from '../..'
 
 export const Container = styled.div`
-  color: ${theme('colors.text')};
+  color: ${getTheme('colors.text')};
 `
 
 export const Label = styled.label`
@@ -13,13 +13,13 @@ export const Label = styled.label`
 export const Helper = styled.label`
   display: block;
   font-size: 12px;
-  color: ${theme('colors.textLight')};
+  color: ${getTheme('colors.textLight')};
 `
 
 export const Error = styled.label`
   display: block;
   font-size: 14px;
-  color: ${theme('colors.danger')};
+  color: ${getTheme('colors.danger')};
 `
 
 export const Control = styled.div`
