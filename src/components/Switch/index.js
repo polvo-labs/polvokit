@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Text from '../Text'
 import {
   Container,
-  Button
+  Switcher
 } from './styles'
 
 function Switch (props) {
@@ -12,17 +12,24 @@ function Switch (props) {
     onChange,
     label,
     labelProps,
+    disabled,
     ...rest
   } = props
 
   return (
     <div {...rest}>
-      <Container onClick={() => {
-        onChange(!value)
-      }}>
-        <Button switched={value}>
-
-        </Button>
+      <Container
+        disabled={disabled}
+        onClick={() => {
+          if (!disabled) {
+            onChange(!value)
+          }
+        }}
+      >
+        <Switcher
+          switched={value}
+          disabled={disabled}
+        />
         <Text as='div' {...labelProps}>
           {label}
         </Text>
@@ -42,7 +49,14 @@ Switch.propTypes = {
   label: PropTypes.any.isRequired,
 
   /** Label props */
-  labelProps: PropTypes.object
+  labelProps: PropTypes.object,
+
+  /** Disables switch */
+  disabled: PropTypes.bool
+}
+
+Switch.defaultProps = {
+  disabled: false
 }
 
 export default Switch

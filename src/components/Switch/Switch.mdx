@@ -30,6 +30,26 @@ import Switch from '.'
         />
       )}
     </Value>
+    <Value defaultValue={true}>
+      {({ value, set }) => (
+        <Switch
+          label='Disabled switch on'
+          value={value}
+          onChange={set}
+          disabled
+        />
+      )}
+    </Value>
+    <Value defaultValue={false}>
+      {({ value, set }) => (
+        <Switch
+          label='Disabled switch off'
+          value={value}
+          onChange={set}
+          disabled
+        />
+      )}
+    </Value>
   </VerticalSpacer>
 </Playground>
 

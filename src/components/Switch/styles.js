@@ -7,13 +7,13 @@ export const Container = styled.button.attrs({
 })`
   display: flex;
   align-items: center;
-  cursor: pointer;
+  cursor: ${ifProp('disabled', 'not-allowed', 'pointer')};
   background-color: transparent;
   border: none;
   padding: 0;
 `
 
-export const Button = styled.div`
+export const Switcher = styled.div`
   width: 50px;
   height: 26px;
   background-color: ${getTheme('colors.light')};
@@ -21,6 +21,8 @@ export const Button = styled.div`
   margin-right: 10px;
   position: relative;
   flex-shrink: 0;
+
+  ${ifProp('disabled', 'opacity: 0.7;')}
 
   &::after {
     content: " ";
