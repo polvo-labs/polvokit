@@ -5,19 +5,19 @@ import { mq } from '../..'
 const stackCss = css`
   width: auto;
   flex-direction: column;
-  
+
   > * {
-    border-radius: 0;
+    border-radius: 0 !important;
     margin: 0 !important;
 
     &:first-child {
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
+      border-top-left-radius: 3px !important;
+      border-top-right-radius: 3px !important;
     }
 
     &:last-child {
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px !important;
+      border-bottom-right-radius: 3px !important;
     }
   }
 `
@@ -37,16 +37,16 @@ export const Container = styled.div`
   > * {
     ${p => !p.stack && mq.above(p.stackAt, css`
       margin: 0 !important;
-      border-radius: 0;
+      border-radius: 0 !important;
 
       &:first-child {
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px !important;
+        border-bottom-left-radius: 3px !important;
       }
   
       &:last-child {
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px !important;
+        border-bottom-right-radius: 3px !important;
       }
     `)(p)}
   }
