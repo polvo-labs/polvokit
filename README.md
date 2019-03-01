@@ -64,9 +64,11 @@ function Example () {
 - [x] ButtonGroup
 - [x] Switch
 - [x] Box
+- [x] Card
 - [ ] Table
 - [ ] Panel
-- [ ] Card
 - [ ] FileUploader
 - [ ] Modal
+- [ ] Toast
+- [ ] HorizontalSpacer
 - [ ] Theme overriding
