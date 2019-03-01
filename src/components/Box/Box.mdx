@@ -1,0 +1,41 @@
+---
+name: Box
+route: /box
+---
+
+import { Playground, PropsTable } from 'docz'
+import VerticalSpacer from '../VerticalSpacer'
+import Box from '.'
+
+# Box
+
+A simple box component.
+
+<Playground>
+  <VerticalSpacer>
+    <Box>box content</Box>
+    <Box padded>
+      padded box content
+    </Box>
+  </VerticalSpacer>
+</Playground>
+
+## Usage
+
+```js
+import { Box } from 'polvokit'
+
+<Box>
+  content
+</Box>
+
+<Box padded>
+  padded content
+</Box>
+```
+
+## Props
+
+<PropsTable of={Box} />
+
+It also support all props from a common element like 'div'.

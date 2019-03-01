@@ -63,10 +63,10 @@ function Example () {
 - [x] Spinner
 - [x] ButtonGroup
 - [x] Switch
+- [x] Box
 - [ ] Table
 - [ ] Panel
 - [ ] Card
-- [ ] Box
 - [ ] FileUploader
 - [ ] Modal
 - [ ] Theme overriding
