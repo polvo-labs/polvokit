@@ -62,7 +62,7 @@ function Example () {
 - [x] Radio
 - [x] Spinner
 - [x] ButtonGroup
-- [ ] Switch
+- [x] Switch
 - [ ] Table
 - [ ] Panel
 - [ ] Card

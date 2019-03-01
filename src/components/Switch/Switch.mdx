@@ -1,0 +1,50 @@
+---
+name: Switch
+route: /switch
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Value } from 'react-values'
+import VerticalSpacer from '../VerticalSpacer'
+import Switch from '.'
+
+# Switch
+
+<Playground>
+  <VerticalSpacer>
+    <Value defaultValue={false}>
+      {({ value, set }) => (
+        <Switch
+          label='Switch me'
+          value={value}
+          onChange={set}
+        />
+      )}
+    </Value>
+    <Value defaultValue={true}>
+      {({ value, set }) => (
+        <Switch
+          label='Switched by default'
+          value={value}
+          onChange={set}
+        />
+      )}
+    </Value>
+  </VerticalSpacer>
+</Playground>
+
+## Usage
+
+```js
+import { Switch } from 'polvokit'
+
+<Switch
+  value={false}
+  onChange={value => set(value)}
+  label='Switch me'
+/>
+```
+
+## Props
+
+<PropsTable of={Switch} />
