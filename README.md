@@ -65,10 +65,10 @@ function Example () {
 - [x] Switch
 - [x] Box
 - [x] Card
+- [x] HorizontalSpacer
 - [ ] Table
 - [ ] Panel
 - [ ] FileUploader
 - [ ] Modal
 - [ ] Toast
-- [ ] HorizontalSpacer
 - [ ] Theme overriding

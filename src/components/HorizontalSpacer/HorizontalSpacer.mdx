@@ -1,0 +1,35 @@
+---
+name: HorizontalSpacer
+route: /horizontal-spacer
+---
+
+import { Playground, PropsTable } from 'docz'
+import Button from '../Button'
+import Link from '../Link'
+import HorizontalSpacer from '.'
+
+# HorizontalSpacer
+
+<Playground>
+  <HorizontalSpacer>
+    <Button appearance='primary'>Login</Button>
+    <div>
+      <Link as='a' href='#'>Forgot password</Link>
+    </div>
+  </HorizontalSpacer>
+</Playground>
+
+## Usage
+
+```js
+import { HorizontalSpacer } from 'polvokit'
+
+<HorizontalSpacer>
+  <Child1 />
+  <Child2 />
+</HorizontalSpacer>
+```
+
+## Props
+
+<PropsTable of={HorizontalSpacer} />
