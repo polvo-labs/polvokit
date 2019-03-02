@@ -23,7 +23,7 @@ FormGrid.defaultProps = {
 }
 
 export const Grid = styled.div`
-  ${props => mq.above(props.breakpoint, css`
+  ${mq.above(p => p.breakpoint, css`
     display: flex;
     align-items: ${props => props.alignItems};
     justify-content: space-between;
@@ -40,11 +40,11 @@ export const Grid = styled.div`
         margin-right: 0;
       }
     }
-  `)(props)}
+  `)}
 
-  ${props => mq.below(props.breakpoint, css`
+  ${mq.below(p => p.breakpoint, css`
     > * + * {
       margin-top: 20px;
     }
-  `)(props)};
+  `)};
 `
