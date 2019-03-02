@@ -1,5 +1,6 @@
 import { css } from 'styled-components'
 import objectPath from 'object-path'
+import isFunction from 'is-function'
 import { theme } from '../..'
 
 export default {
@@ -23,9 +24,14 @@ export default {
     `
 }
 
-const getBp = (bp, props) =>
-  objectPath.get(
+const getBp = (bp, props) => {
+  const breakpoint = isFunction(bp)
+    ? bp(props)
+    : bp
+
+  return objectPath.get(
     props.theme.breakpoints || theme.breakpoints,
-    bp,
-    bp
+    breakpoint,
+    breakpoint
   )
+}

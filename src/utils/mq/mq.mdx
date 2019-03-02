@@ -37,3 +37,14 @@ const MyComponent = styled.div`
   `}
 `
 ```
+
+If you want to get a breakpoint from props,
+you can pass a function:
+
+```js
+const MyComponent = styled.div`
+  ${mq.above(props => props.breakAt, css`
+    background-color: hotpink;
+  `}
+`
+```
