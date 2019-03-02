@@ -48,14 +48,18 @@ Button.propTypes = {
   full: PropTypes.bool,
 
   /** Full button at certain breakpoint */
-  fullAt: PropTypes.oneOf(Object.keys(theme.breakpoints))
+  fullAt: PropTypes.oneOf(Object.keys(theme.breakpoints)),
+
+  /** Outline buttons */
+  outline: PropTypes.bool
 }
 
 Button.defaultProps = {
   appearance: 'default',
   size: 'default',
   loading: false,
-  full: false
+  full: false,
+  outline: false
 }
 
 Button.Anchor = function ButtonAnchor (props) {

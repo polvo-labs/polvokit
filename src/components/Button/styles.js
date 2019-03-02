@@ -13,14 +13,20 @@ export const ButtonStyled = styled.button`
   align-items: center;
   justify-content: center;
   height: ${getTheme('dimensions.controlHeight')};
-  background-color: ${p => getTheme(`colors.${p.appearance}`)};
-  color: ${p => p.appearance === 'default' ? '#000' : '#fff'};
   cursor: pointer;
   border: none;
   border-radius: 3px;
   font-family: ${getTheme('fonts.primary')};
   text-decoration: none;
   box-sizing: border-box;
+  
+  ${ifProp('outline', css`
+    background-color: transparent;
+    color: ${getTheme('colors.text')};
+  `, css`
+    background-color: ${p => getTheme(`colors.${p.appearance}`)};
+    color: ${p => p.appearance === 'default' ? '#000' : '#fff'};
+  `)};
 
   ${switchProp('size', {
     small: css`
@@ -50,7 +56,11 @@ export const ButtonStyled = styled.button`
 
   &:not([disabled]):hover,
   &:not([disabled]):active {
-    background-color: ${p => getTheme(`colors.${p.appearance}`, darken(0.05))};
+    ${ifProp('outline', css`
+      background-color: ${getTheme('colors.default')};
+    `, css`
+      background-color: ${p => getTheme(`colors.${p.appearance}`, darken(0.05))};
+    `)}
   }
 
   &:not([disabled]):active {
