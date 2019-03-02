@@ -1,0 +1,39 @@
+---
+name: Toast
+route: /toast
+---
+
+# Toast
+
+Polvokit provides a toastr-like message implementation.
+
+You must wrap your app with `ToastProvider` component:
+
+```js
+import { ToastProvider } from 'polvokit'
+
+function App () {
+  return (
+    <ToastProvider>
+      <AppContent />
+    </ToastProvider>
+  )
+}
+```
+
+Then, you can import the `useToast` hook to get
+access to the methods:
+
+```js
+import { useToast } from 'polvokit'
+
+function Screen () {
+  const { push } = useToast()
+
+  return (
+    <button onClick={() => push('your message')}>
+      send toast
+    </button>
+  )
+}
+```

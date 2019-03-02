@@ -51,7 +51,7 @@ Button.propTypes = {
   fullAt: PropTypes.oneOf(Object.keys(theme.breakpoints)),
 
   /** Outline buttons */
-  outline: PropTypes.bool
+  outline: PropTypes.bool,
 }
 
 Button.defaultProps = {

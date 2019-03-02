@@ -7,7 +7,7 @@ export default [
         icon: 'home',
         exact: true,
         to: '/',
-        component: () => 'Home'
+        component: require('./screens/HomeScreen').default
       }
     ]
   },

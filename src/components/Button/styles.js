@@ -22,7 +22,7 @@ export const ButtonStyled = styled.button`
   
   ${ifProp('outline', css`
     background-color: transparent;
-    color: ${getTheme('colors.text')};
+    color: inherit;
   `, css`
     background-color: ${p => getTheme(`colors.${p.appearance}`)};
     color: ${p => p.appearance === 'default' ? '#000' : '#fff'};
