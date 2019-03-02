@@ -6,13 +6,7 @@ export const Context = React.createContext()
 
 class ToastProvider extends React.Component {
   state = {
-    messages: [
-      {
-        id: 1,
-        type: 'success',
-        content: 'Message content'
-      }
-    ],
+    messages: [],
     mounted: false
   }
 

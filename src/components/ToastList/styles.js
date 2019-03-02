@@ -1,22 +1,26 @@
-import styled, { keyframes } from 'styled-components'
-import { prop } from 'styled-tools'
+import styled from 'styled-components'
+import posed from 'react-pose'
 
-const animation = keyframes`
-  from {
-    transform: translateY(calc(-100% - 30px));
+const Box = posed.div({
+  draggable: 'x',
+  dragBounds: {
+    left: '-50%',
+    right: '50%'
+  },
+  enter: {
+    opacity: 1,
+    top: props => props.top
+  },
+  exit: {
+    opacity: 0,
+    left: '50%'
   }
+})
 
-  to {
-    transform: translateY(0);
-  }
-`
-
-export const Item = styled.div`
+export const Item = styled(Box)`
   position: absolute;
-  top: ${prop('top')}px;
+  top: -100%;
   left: 50%;
   width: 300px;
   margin-left: -150px;
-  transition: all 0.2s ease;
-  animation: ${animation} 0.2s ease;
 `
