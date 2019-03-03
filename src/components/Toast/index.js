@@ -14,7 +14,7 @@ function Toast ({ message, onDismiss }) {
 
     const interval = window.setInterval(() => {
       onDismiss()
-    }, 3000)
+    }, 5000)
 
     return () => window.clearInterval(interval)
   }, [hovered])

@@ -11,4 +11,5 @@ export const Container = styled.div`
   font-family: ${getTheme('fonts.primary')};
   font-size: 14px;
   color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 `

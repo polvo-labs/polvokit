@@ -57,7 +57,7 @@ export const ButtonStyled = styled.button`
   &:not([disabled]):hover,
   &:not([disabled]):active {
     ${ifProp('outline', css`
-      background-color: ${getTheme('colors.default')};
+      background-color: hsla(0, 0%, 100%, 0.3);
     `, css`
       background-color: ${p => getTheme(`colors.${p.appearance}`, darken(0.05))};
     `)}

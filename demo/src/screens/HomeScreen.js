@@ -55,6 +55,20 @@ export default function HomeScreen () {
       <div>
         <Button
           type='button'
+          appearance='primary'
+          onClick={() => {
+            push({
+              type: 'primary',
+              content: 'Primary toast message'
+            })
+          }}
+        >
+          Show default toast
+        </Button>
+      </div>
+      <div>
+        <Button
+          type='button'
           outline
           onClick={() => clearAll()}
         >
