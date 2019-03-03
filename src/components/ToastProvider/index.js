@@ -44,6 +44,12 @@ class ToastProvider extends React.Component {
     }))
   }
 
+  clearAll = () => {
+    this.setState({
+      messages: []
+    })
+  }
+
   render () {
     if (!this.state.mounted) {
       return null
@@ -52,6 +58,7 @@ class ToastProvider extends React.Component {
     const value = {
       push: this.push,
       dismiss: this.dismiss,
+      clearAll: this.clearAll,
       messages: this.state.messages
     }
 
