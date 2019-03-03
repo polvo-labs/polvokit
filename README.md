@@ -66,9 +66,9 @@ function Example () {
 - [x] Box
 - [x] Card
 - [x] HorizontalSpacer
+- [x] Toast
 - [ ] Table
 - [ ] Panel
 - [ ] FileUploader
 - [ ] Modal
-- [ ] Toast
 - [ ] Theme overriding
