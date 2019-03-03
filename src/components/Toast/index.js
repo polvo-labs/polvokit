@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../Button'
 import Icon from '../Icon'
 import { Container } from './styles'
 
 function Toast ({ message, onDismiss }) {
+  const [ hovered, setHovered ] = useState(false)
+
+  useEffect(() => {
+    if (hovered) {
+      return
+    }
+
+    const interval = window.setInterval(() => {
+      onDismiss()
+    }, 3000)
+
+    return () => window.clearInterval(interval)
+  }, [hovered])
+
   return (
-    <Container>
+    <Container
+      type={message.type}
+      onMouseEnter={() => !hovered && setHovered(true)}
+      onMouseLeave={() => hovered && setHovered(false)}
+    >
       <div>
         {message.content}
       </div>
