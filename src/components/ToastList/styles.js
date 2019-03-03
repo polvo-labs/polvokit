@@ -23,4 +23,14 @@ export const Item = styled(Box)`
   left: 50%;
   width: 300px;
   margin-left: -150px;
+  pointer-events: all;
+`
+
+export const Container = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 `

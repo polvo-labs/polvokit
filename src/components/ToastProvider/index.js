@@ -20,7 +20,7 @@ class ToastProvider extends React.Component {
   }
 
   componentWillUnmount () {
-
+    document.body.removeChild(this.container)
   }
 
   push = message => {
