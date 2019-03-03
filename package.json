@@ -28,7 +28,9 @@
   },
   "dependencies": {
     "is-function": "^1.0.1",
-    "object-path": "^0.11.4"
+    "nanoid": "^2.0.1",
+    "object-path": "^0.11.4",
+    "react-pose": "^4.0.7"
   },
   "peerDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.15",

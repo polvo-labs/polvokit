@@ -1,0 +1,54 @@
+---
+name: Toast
+route: /toast
+---
+
+import ToastProvider from '.'
+import HomeScreen from '../../../demo/src/screens/HomeScreen'
+
+# Toast
+
+Polvokit provides a toastr-like message implementation.
+
+## Example
+
+<ToastProvider>
+  <HomeScreen />
+</ToastProvider>
+
+## Setup
+
+In order to use Toast, you have to wrap your app
+with the `ToastProvider` component:
+
+```js
+import { ToastProvider } from 'polvokit'
+
+function App () {
+  return (
+    <ToastProvider>
+      <AppContent />
+    </ToastProvider>
+  )
+}
+```
+
+The `useToast` hook provides
+access to the methods and the messages as well:
+
+```js
+import { useToast } from 'polvokit'
+
+function Screen () {
+  const { push, messages, dismiss, clearAll } = useToast()
+
+  return (
+    <button onClick={() => push({
+      type: 'success',
+      content: 'Message content...'
+    })}>
+      send toast
+    </button>
+  )
+}
+```
