@@ -46,7 +46,16 @@ function Toast ({ message, onDismiss }) {
 
 Toast.propTypes = {
   /** Message object */
-  message: PropTypes.object.isRequired,
+  message: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    content: PropTypes.any.isRequired,
+    type: PropTypes.oneOf([
+      'default',
+      'success',
+      'error',
+      'warning'
+    ]).isRequired
+  }).isRequired,
 
   /** Dismiss callback */
   onDismiss: PropTypes.func.isRequired

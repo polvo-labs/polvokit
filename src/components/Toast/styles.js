@@ -1,11 +1,23 @@
 import styled from 'styled-components'
 import { getTheme } from '../..'
 
+const colors = {
+  default: 'primary',
+  error: 'danger',
+  success: 'success',
+  warning: 'warning'
+}
+
+const getColor = props => {
+  const color = colors[props.type]
+  return getTheme(`colors.${color}`)
+}
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${p => getTheme(`colors.${p.type}`)};
+  background-color: ${getColor};
   padding: 10px;
   border-radius: 3px;
   font-family: ${getTheme('fonts.primary')};

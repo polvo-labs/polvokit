@@ -30,8 +30,8 @@ export default function HomeScreen () {
           appearance='danger'
           onClick={() => {
             push({
-              type: 'danger',
-              content: 'Dangerous toast mesage'
+              type: 'error',
+              content: 'Dangerous toast message'
             })
           }}
         >
@@ -58,7 +58,7 @@ export default function HomeScreen () {
           appearance='primary'
           onClick={() => {
             push({
-              type: 'primary',
+              type: 'default',
               content: 'Primary toast message'
             })
           }}
