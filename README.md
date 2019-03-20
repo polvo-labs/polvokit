@@ -67,6 +67,7 @@ function Example () {
 - [x] Card
 - [x] HorizontalSpacer
 - [x] Toast
+- [ ] Media
 - [ ] Table
 - [ ] Panel
 - [ ] FileUploader
