@@ -34,10 +34,7 @@ You can disable some days by using the `isDaySelectable` prop:
       <Calendar
         value={value}
         onChange={set}
-        isDaySelectable={date => {
-          const weekday = date.getDay()
-          return weekday !== 0 && weekday !== 6
-        }}
+        isDaySelectable={date => ![0, 6].includes(date.getDay())}
       />
     )}
   </Value>

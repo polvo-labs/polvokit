@@ -96,8 +96,8 @@ function Calendar (props) {
                     return
                   }
 
-                  if (!isSameDay(day, value)) {
-                    onChange(day)
+                  if (!isSameDay(day.date, value)) {
+                    onChange(day.date)
                   }
                 }}
               >
