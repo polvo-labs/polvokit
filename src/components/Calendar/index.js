@@ -41,7 +41,6 @@ function Calendar (props) {
 
   const days = useMemo(
     () => {
-      console.log('generate days')
       return utils.makeDays(displayDate)
     },
     [displayDate]
@@ -74,35 +73,35 @@ function Calendar (props) {
         ))}
       </Weekdays>
       <Grid>
-        {days.map(date => {
-          const isDisabled = !isDaySelectable(date)
+        {days.map(day => {
+          const isDisabled = !isDaySelectable(day.date)
           return (
             <Cell
-              key={date.toString()}
-              active={isDayWithinRange(date, hoveredDate)}
+              key={day.id}
+              active={isDayWithinRange(day.date, hoveredDate)}
               onMouseEnter={() => {
-                setHoveredDate(date)
+                setHoveredDate(day.date)
               }}
               onMouseLeave={() => {
                 setHoveredDate(null)
               }}
             >
               <Day
-                isAdjacentMonth={!isSameMonth(displayDate, date)}
-                isToday={isToday(date)}
-                isSelected={isSameDay(date, value)}
+                isAdjacentMonth={day.isAdjacentMonth}
+                isToday={day.isToday}
+                isSelected={isSameDay(day.date, value)}
                 isDisabled={isDisabled}
                 onClick={() => {
                   if (isDisabled) {
                     return
                   }
 
-                  if (!isSameDay(date, value)) {
-                    onChange(date)
+                  if (!isSameDay(day, value)) {
+                    onChange(day)
                   }
                 }}
               >
-                {date.getDate()}
+                {day.date.getDate()}
               </Day>
             </Cell>
           )

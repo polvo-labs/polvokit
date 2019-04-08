@@ -5,18 +5,25 @@ import {
   addDays,
   getDaysInMonth,
   eachDay,
-  setDay
+  setDay,
+  isSameMonth,
+  isToday
 } from 'date-fns'
 
-export function makeDays (date) {
-  const selectedDate = setDate(date, 1)
-  const daysInMonth = getDaysInMonth(date)
+export function makeDays (displayDate) {
+  const selectedDate = setDate(displayDate, 1)
+  const daysInMonth = getDaysInMonth(displayDate)
   const weekday = getDay(selectedDate)
   const startDate = subDays(selectedDate, weekday)
   const days = Math.ceil((weekday + daysInMonth) / 7) * 7 - 1
   const endDate = addDays(startDate, days)
 
-  return eachDay(startDate, endDate)
+  return eachDay(startDate, endDate).map(date => ({
+    id: date.toString(),
+    date,
+    isToday: isToday(date),
+    isAdjacentMonth: !isSameMonth(displayDate, date)
+  }))
 }
 
 const weekdayFormat = new window.Intl.DateTimeFormat(
