@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useMemo } from 'react'
+import nanoid from 'nanoid'
 import PropTypes from 'prop-types'
 import {
   Container,
@@ -8,7 +9,12 @@ import {
   Error
 } from './styles'
 
-function FormGroup ({ id, label, error, helper, children }) {
+function FormGroup ({ id: propId, label, error, helper, children }) {
+  const id = useMemo(
+    () => propId || nanoid(),
+    [propId]
+  )
+
   return (
     <Container>
       <Label htmlFor={id}>{label}</Label>
@@ -26,8 +32,8 @@ function FormGroup ({ id, label, error, helper, children }) {
 }
 
 FormGroup.propTypes = {
-  /** Control's ID the will be used in `htmlFor` prop */
-  id: PropTypes.string.isRequired,
+  /** Control's ID the will be used in `htmlFor` prop. If you don't pass an ID, it will be automatically generated */
+  id: PropTypes.string,
 
   /** Label */
   label: PropTypes.string.isRequired,
