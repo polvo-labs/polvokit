@@ -2,8 +2,7 @@ module.exports = {
   base: '/polvokit/',
   menu: [
     'Getting Started',
-    'Base',
-    'Forms',
+    'Components',
     'Layout',
     'Utils'
   ]
