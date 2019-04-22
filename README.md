@@ -67,9 +67,9 @@ function Example () {
 - [x] Card
 - [x] HorizontalSpacer
 - [x] Toast
+- [x] ThemeDescriptor
+- [x] Theme overriding
 - [ ] Media
 - [ ] Table
-- [ ] Panel
 - [ ] FileUploader
 - [ ] Modal
-- [ ] Theme overriding

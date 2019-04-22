@@ -2,9 +2,13 @@ import objectPath from 'object-path'
 import theme from '../theme'
 
 export default (keypath, transform = value => value) =>
-  transform(
+  props => transform(
     objectPath.get(
-      theme,
-      keypath
+      props.theme,
+      `polvokit.${keypath}`,
+      objectPath.get(
+        theme,
+        keypath
+      )
     )
   )

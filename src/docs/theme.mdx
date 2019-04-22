@@ -1,0 +1,51 @@
+---
+name: Theme
+menu: Getting Started
+---
+
+import ThemeDescriptor from '../components/ThemeDescriptor'
+import theme from '../theme'
+
+# Theme
+
+## Defaults
+
+There are the default theme values:
+
+<ThemeDescriptor theme={theme} />
+
+## Overriding
+
+You can easily override the above theme values by using
+the `<ThemeProvider />` component from styled-components:
+
+```js
+import { ThemeProvider } from 'styled-components'
+
+function App () {
+  return (
+    <ThemeProvider
+      theme={{
+        // use `polvokit` key
+        polvokit: {
+          // override the default primary color
+          colors: {
+            primary: 'hotpink'
+          },
+          
+          // and also override the default font
+          fonts: {
+            primary: 'Verdana'
+          }
+        },
+        
+        // pass your own theme values here
+        myOwnThemeProp: 'wathever',
+        // ...
+      }}
+    >
+      <AppContent />
+    </ThemeProvider>
+  )
+}
+```

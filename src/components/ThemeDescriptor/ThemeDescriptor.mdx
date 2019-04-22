@@ -1,0 +1,52 @@
+---
+name: ThemeDescriptor
+menu: Utils
+---
+
+import { Playground, Props } from 'docz'
+import ThemeDescriptor from '.' 
+
+# ThemeDescriptor
+
+Useful component for describing your theme config object.
+
+## Usage
+
+```js
+import { ThemeDescriptor } from 'polvokit'
+
+// Your theme should look like this:
+const theme = {
+  key: {
+    subkey1: 'value'
+    subkey2: 'value'
+  },
+  key2: {
+    subkey1: 'value'
+    subkey2: 'value'
+  }
+}
+
+<ThemeDescriptor theme={theme} />
+```
+
+## Example
+
+<Playground>
+  <ThemeDescriptor
+    theme={{
+      colors: {
+        primary: '#272750',
+        secondary: '#0ba87c',
+      },
+      fonts: {
+        primary: 'Arial',
+        secondary: 'Georgia'
+      }
+    }}
+  />
+</Playground>
+
+## Props
+
+<Props of={ThemeDescriptor} />
