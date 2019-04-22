@@ -1,3 +1,10 @@
 module.exports = {
-  base: '/polvokit/'
+  base: '/polvokit/',
+  menu: [
+    'Getting Started',
+    'Base',
+    'Forms',
+    'Layout',
+    'Utils'
+  ]
 }
