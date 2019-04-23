@@ -43,7 +43,7 @@ With FormField, the id is generated automatically.
 
 ```js
 import { Form } from 'react-final-form'
-import { FormField, FormSpacer, Button } from 'polvokit'
+import { FormField, FormSpacer, ButtonSubmit } from 'polvokit'
 import * as formUtils from '@polvo-labs/form-utils'
 
 function FormUser (props) {
@@ -80,12 +80,7 @@ function FormUser (props) {
             name='is_email_public'
             label='Is email public'
           />
-          <Button
-            type='submit'
-            loading={submitting}
-          >
-            Salvar
-          </Button>
+          <ButtonSubmit submitting={submitting} />
         </FormSpacer>
       )}
     </Form>

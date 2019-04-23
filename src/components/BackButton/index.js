@@ -1,7 +1,10 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import Button from '../Button'
-import Icon from '../Icon'
+import {
+  Button,
+  Icon,
+  Config
+} from '../..'
 
 export default function BackButton ({ onClick, ...props }) {
   return (
@@ -17,7 +20,7 @@ export default function BackButton ({ onClick, ...props }) {
             }
           }}
           before={<Icon icon='chevron-left' />}
-          children='Back'
+          children={<Config id='messages.back' defaultValue='Back' />}
           {...props}
         />
       )}

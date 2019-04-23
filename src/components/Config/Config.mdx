@@ -1,0 +1,61 @@
+---
+name: Config
+route: /config
+menu: Utils
+---
+
+# Config
+
+These components are used specially for handling i18n. Check out the
+i18n section.
+
+## ConfigProvider
+
+```js
+import { ConfigProvider } from 'polvokit'
+
+<ConfigProvider
+  config={{
+    param: 'value',
+    key: {
+      subkey: 'another value'
+    }
+  }}
+>
+  <YourApp />
+</ConfigProvider>
+```
+
+## Config
+
+You can retrieve the values with the `Config` component:
+
+```js
+import { Config } from 'polvokit'
+
+<Config
+  id='key.subkey'
+  defaultValue='you can provide a fallback value'
+/>
+```
+
+## useConfig
+
+A hook is also available:
+
+```js
+import { useConfig } from 'polvokit'
+
+function MyComponent (props) {
+  const API_KEY = useConfig({ id: 'api_key' })
+  
+  return (
+    <Fetch
+      url={props.url}
+      headers={{
+        Authorization: API_KEY
+      }}
+    />
+  )
+}
+```

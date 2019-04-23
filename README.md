@@ -69,6 +69,9 @@ function Example () {
 - [x] Toast
 - [x] ThemeDescriptor
 - [x] Theme overriding
+- [x] i18n
+- [x] Config
+- [ ] ButtonSubmit
 - [ ] FormSpacer
 - [ ] FormField
 - [ ] Media

@@ -1,0 +1,55 @@
+---
+name: i18n
+route: /i18n
+menu: Getting Started
+---
+
+# i18n
+
+You can use `ConfigProvider` for translating the messages that polvokit
+uses for its components:
+
+```js
+import { ConfigProvider } from 'polvokit'
+
+const config = {
+  messages: {
+    save: 'Salvar',
+    loading: 'Carregando',
+    back: 'Voltar',
+    weekdays: [
+      'Dom',
+      'Seg',
+      'Ter',
+      'Qua',
+      'Qui',
+      'Sex',
+      'Sáb'
+    ],
+    months: [
+      'Janeiro',
+      'Fevereiro',
+      'Março',
+      'Abril',
+      'Maio',
+      'Junho',
+      'Julho',
+      'Agosto',
+      'Setembro',
+      'Outubro',
+      'Novembro',
+      'Dezembro'
+    ],
+    previousMonth: 'Voltar mês',
+    nextMonth: 'Próximo mês'
+  }
+}
+Next month
+function App () {
+  return (
+    <ConfigProvider config={config}>
+      <AppContent />
+    </ConfigProvider>
+  )
+}
+```

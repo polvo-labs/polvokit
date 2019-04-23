@@ -1,3 +1,5 @@
+import { useMemo } from 'react'
+import { useConfig } from '../..'
 import {
   setDate,
   getDay,
@@ -5,7 +7,6 @@ import {
   addDays,
   getDaysInMonth,
   eachDay,
-  setDay,
   isSameMonth,
   isToday
 } from 'date-fns'
@@ -26,25 +27,16 @@ export function makeDays (displayDate) {
   }))
 }
 
-const weekdayFormat = new window.Intl.DateTimeFormat(
-  undefined,
-  {
-    weekday: 'short'
-  }
-)
-
-export function formatWeekday (weekday) {
-  const date = setDay(new Date(), weekday)
-  return weekdayFormat.format(date)
-}
-
-const monthFormat = new window.Intl.DateTimeFormat(
-  undefined,
-  {
-    month: 'long'
-  }
-)
-
-export function formatMonth (date) {
-  return monthFormat.format(date)
+export function useMessages () {
+  return useMemo(
+    () => {
+      return {
+        months: useConfig({ id: 'messages.months' }),
+        weekdays: useConfig({ id: 'messages.weekdays' }),
+        previousMonth: useConfig({ id: 'messages.previousMonth' }),
+        nextMonth: useConfig({ id: 'messages.nextMonth' })
+      }
+    },
+    []
+  )
 }

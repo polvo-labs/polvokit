@@ -6,7 +6,7 @@ import {
   addMonths
 } from 'date-fns'
 import * as utils from './utils'
-import Icon from '../Icon'
+import { Icon, useConfig } from '../..'
 import {
   Container,
   Header,
@@ -23,11 +23,11 @@ function Calendar (props) {
   const {
     value,
     onChange,
-    formatHeaderDisplay,
-    formatWeekday,
     isDaySelectable,
     isDayWithinRange
   } = props
+
+  const messages = utils.useMessages()
 
   const [ displayDate, setDisplayDate ] = useState(value || new Date())
   const [ hoveredDate, setHoveredDate ] = useState(null)
@@ -49,16 +49,16 @@ function Calendar (props) {
     <Container>
       <Header>
         <HeaderButton
-          title='Previous month'
+          title={messages.previousMonth}
           onClick={() => setDisplayDate(addMonths(displayDate, -1))}
         >
           <Icon icon='chevron-left' />
         </HeaderButton>
         <HeaderInfo>
-          {formatHeaderDisplay(displayDate, props)}
+          {messages.months[displayDate.getMonth()]}
         </HeaderInfo>
         <HeaderButton
-          title='Next month'
+          title={messages.nextMonth}
           onClick={() => setDisplayDate(addMonths(displayDate, 1))}
         >
           <Icon icon='chevron-right' />
@@ -67,7 +67,7 @@ function Calendar (props) {
       <Weekdays>
         {[0, 1, 2, 3, 4, 5, 6].map(weekday => (
           <Weekday key={weekday}>
-            {formatWeekday(weekday)}
+            {messages.weekdays[weekday]}
           </Weekday>
         ))}
       </Weekdays>
@@ -117,12 +117,6 @@ Calendar.propTypes = {
   /** Change handler */
   onChange: PropTypes.func,
 
-  /** Weekday formatter */
-  formatWeekday: PropTypes.func,
-
-  /** Header display formatter */
-  formatHeaderDisplay: PropTypes.func,
-
   /** Whether the day is selectable */
   isDaySelectable: PropTypes.func,
 
@@ -134,9 +128,6 @@ Calendar.defaultProps = {
   value: null,
   onChange: () => null,
   isDaySelectable: date => true,
-  formatWeekday: utils.formatWeekday,
-  formatHeaderDisplay: date =>
-    `${utils.formatMonth(date)} - ${date.getFullYear()}`,
   isDayWithinRange: date => false
 }
 
