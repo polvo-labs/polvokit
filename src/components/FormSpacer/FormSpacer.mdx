@@ -1,0 +1,56 @@
+---
+name: FormSpacer
+route: /form-spacer
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { FormSpacer, FormGroup, Input, Button } from '../..'  
+
+# FormSpacer
+
+A VerticalSpacer for forms.
+
+## Usage
+
+```js
+import { Form } from 'react-final-form'
+import { FormSpacer, FormField, ButtonSubmit } from 'polvokit'
+
+function FormLogin (props) {
+  return (
+    <Form {...props}>
+      {({ handleSubmit, submitting }) => (
+        <form onSubmit={handleSubmit}>
+          <FormSpacer>
+            <FormField.Input
+              name='name'
+            />          
+            <FormField.Input
+              name='password'
+            />
+            <ButtonSubmit
+              label='Login'
+              submitting={submitting}
+            />
+          </FormSpacer>
+        </form>
+      )}
+    </Form>
+  )
+}
+```
+
+## Example
+
+<Playground>
+  <FormSpacer>
+    <FormGroup id='input_name' label='Input name'>
+      <Input />
+    </FormGroup>
+    <FormGroup id='input_password' label='Input password'>
+      <Input />
+    </FormGroup>
+    <Button appearance='success'>Save</Button>
+  </FormSpacer>
+</Playground>

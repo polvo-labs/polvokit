@@ -72,7 +72,7 @@ function Example () {
 - [x] i18n
 - [x] Config
 - [x] ButtonSubmit
-- [ ] FormSpacer
+- [x] FormSpacer
 - [ ] FormField
 - [ ] Media
 - [ ] Table
