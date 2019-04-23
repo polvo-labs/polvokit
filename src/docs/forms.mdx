@@ -1,0 +1,94 @@
+---
+name: Forms
+route: /forms
+menu: Getting Started
+---
+
+# Forms
+
+We recommend [react-final-form](https://github.com/final-form/react-final-form) for building forms and
+[@polvo-labs/form-utils](https://github.com/polvo-labs/form-utils) for handling validation and masking.
+
+Polvokit also provides a component called `FormField`, a wrapper around react-final-form's Field component.
+It comes with lots of shortcuts for common polvokit components.
+
+So, instead of doing this:
+
+```
+<Field name='name' id='user_name'>
+  {({ input, meta, id, ...rest }) => (
+    <FormGroup
+      id={id}
+      label='Name'
+      error={meta.touched && meta.error}
+    />
+      <Input {...input} {...rest} />
+    </FormGroup>
+  )}
+</Field>
+```
+
+You can use `FormField` to do the above work:
+
+```js
+<FormField.Input
+  name='name'
+  label='Name'
+/>
+```
+
+With FormField, the id is generated automatically.
+
+## Form example
+
+```js
+import { Form } from 'react-final-form'
+import { FormField, FormSpacer, Button } from 'polvokit'
+import * as formUtils from '@polvo-labs/form-utils'
+
+function FormUser (props) {
+  return (
+    <Form onSubmit={props.onSubmit}>
+      {({ handleSubmit, submitting }) => (
+        <FormSpacer>
+          <FormField.Input
+            name='name'
+            label='Name'
+            {...formUtils.required}
+          />
+          <FormField.Input
+            name='email'
+            label='E-mail'
+            {...formUtils.emailRequired}
+          />
+          <FormField.InputDatePicker
+            name='birthday'
+            label='Birthday'
+            {...formUtils.required}
+          />
+          <FormField.Select
+            name='profile'
+            label='Profile'
+            options=[
+              { label: 'Guest', value: 'guest' },
+              { label: 'Public', value: 'public' },
+              { label: 'Admin', value: 'admin' }
+            ]
+            {...formUtils.required}
+          />
+          <FormField.Switch
+            name='is_email_public'
+            label='Is email public'
+          />
+          <Button
+            type='submit'
+            loading={submitting}
+          >
+            Salvar
+          </Button>
+        </FormSpacer>
+      )}
+    </Form>
+  )
+}
+```
