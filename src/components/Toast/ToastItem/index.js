@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import Button from '../Button'
-import Icon from '../Icon'
+import Button from '../../Button'
+import Icon from '../../Icon'
 import { Container } from './styles'
 
 function Toast ({ message, onDismiss }) {

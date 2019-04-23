@@ -4,7 +4,7 @@ route: /toast
 menu: Components
 ---
 
-import ToastProvider from '.'
+import ToastProvider from './ToastProvider'
 import HomeScreen from '../../../demo/src/screens/HomeScreen'
 
 # Toast
@@ -61,3 +61,10 @@ function Screen () {
 | id   | string | generated automatically |
 | type | string | `default`, `success`, `error`, `warning` |
 | content | string or react child | the toast content |
+
+```js
+push({
+  type: 'success',
+  message: 'User successfuly created'
+})
+```

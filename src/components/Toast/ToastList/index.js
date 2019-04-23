@@ -1,7 +1,7 @@
 import React from 'react'
 import { createPortal } from 'react-dom'
-import { PoseGroup } from 'react-pose'
-import Toast from '../Toast'
+import { PoseGroup } from 'react-pose/lib/index'
+import Toast from '../ToastItem'
 import { Container, Item } from './styles'
 
 function ToastList (props) {
