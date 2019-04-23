@@ -71,7 +71,7 @@ function Example () {
 - [x] Theme overriding
 - [x] i18n
 - [x] Config
-- [ ] ButtonSubmit
+- [x] ButtonSubmit
 - [ ] FormSpacer
 - [ ] FormField
 - [ ] Media

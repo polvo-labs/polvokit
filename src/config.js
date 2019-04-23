@@ -1,6 +1,7 @@
 export default {
   messages: {
-    save: 'Submitting',
+    save: 'Save',
+    submitting: 'Processing',
     loading: 'Loading',
     back: 'Back',
     weekdays: [

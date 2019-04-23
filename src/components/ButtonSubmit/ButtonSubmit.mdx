@@ -1,0 +1,42 @@
+---
+name: ButtonSubmit
+route: /button-submit
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import ButtonSubmit from '.'
+import { VerticalSpacer } from '../..'  
+
+# ButtonSubmit
+
+A submit button for forms.
+
+## Example
+
+<Playground>
+  <VerticalSpacer>
+    <div>
+      <ButtonSubmit />
+    </div>
+    <div>
+      <ButtonSubmit submitting />
+    </div>
+  </VerticalSpacer>
+</Playground>
+
+## Usage
+
+```js
+import { ButtonSubmit } from 'polvokit'
+
+<ButtonSubmit
+  submitting={submitting}
+/>
+```
+
+## Props
+
+It also accepts all props from Button.
+
+<Props of={ButtonSubmit} />
