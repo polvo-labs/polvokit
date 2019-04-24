@@ -15,7 +15,7 @@ export const CalendarWrapper = styled.div`
   transition: 0.2s ease all, 0s visibility;
   transition-delay: 0.1s;
   position: absolute;
-  z-index: ${getTheme('stacks.control')};
+  z-index: ${getTheme('stacks.medium')};
 
   ${ifProp('show', css`
     visibility: visible;

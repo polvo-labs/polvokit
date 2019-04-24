@@ -7,6 +7,7 @@ function Select (props) {
     <Container>
       <ReactSelect
         classNamePrefix='react-select'
+        placeholder=''
         {...props}
       />
     </Container>

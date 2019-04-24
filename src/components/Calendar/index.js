@@ -6,7 +6,7 @@ import {
   addMonths
 } from 'date-fns'
 import * as utils from './utils'
-import { Icon, useConfig } from '../..'
+import { Icon } from '../..'
 import {
   Container,
   Header,

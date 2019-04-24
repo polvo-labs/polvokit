@@ -1,0 +1,60 @@
+---
+name: FormField
+route: /form-field
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { Form } from 'react-final-form' 
+import {
+  FormField,
+  FormSpacer,
+  ButtonSubmit
+} from '../..' 
+
+# FormField
+
+## Example
+
+<Playground>
+  <Form onSubmit={console.log}>
+    {({ handleSubmit, values }) => (
+      <form onSubmit={handleSubmit}>
+        <FormSpacer>
+          <FormField.Input
+            name='name'
+            label='Name'
+          />
+          <FormField.Input
+            name='password'
+            type='password'
+            label='Password'
+            helper='At least 6 caracters and one number'
+          />
+          <FormField.InputDatePicker
+            name='birthday'
+            label='Birthday'
+          />
+          <FormField.Select
+            name='profile'
+            label='Profile'
+            options={[
+              { label: 'Guest', value: 'guest' },
+              { label: 'Public', value: 'public' },
+              { label: 'Admin', value: 'admin' }
+            ]}
+          />
+          <FormField.Switch
+            name='subscribe_newsletter'
+            label='Suscribe newsletter'
+          />
+          <FormField.Calendar
+            name='date'
+            label='Select a date'
+          />
+          <pre>{JSON.stringify(values, null, 4)}</pre>
+        </FormSpacer>
+      </form>
+    )}
+  </Form>
+</Playground>

@@ -9,12 +9,7 @@ import {
   Error
 } from './styles'
 
-function FormGroup ({ id: propId, label, error, helper, children }) {
-  const id = useMemo(
-    () => propId || nanoid(),
-    [propId]
-  )
-
+function FormGroup ({ id, label, error, helper, children }) {
   return (
     <Container>
       <Label htmlFor={id}>{label}</Label>
@@ -32,7 +27,7 @@ function FormGroup ({ id: propId, label, error, helper, children }) {
 }
 
 FormGroup.propTypes = {
-  /** Control's ID the will be used in `htmlFor` prop. If you don't pass an ID, it will be automatically generated */
+  /** Control's ID */
   id: PropTypes.string,
 
   /** Label */
