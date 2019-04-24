@@ -1,0 +1,34 @@
+---
+name: SectionHeader
+route: /section-header
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { SectionHeader, Button } from '../..'
+
+# SectionHeader
+
+<Playground>
+  <SectionHeader
+    title='Users'
+    side={<Button appearance='success'>Add</Button>}
+  />
+</Playground>
+
+## Usage
+
+```js
+import { SectionHeader } from 'polvokit'
+
+<SectionHeader
+  title='Your title'
+  side={<YourSideComponent />}
+/>
+```
+
+## Props
+
+It also accepts the same props as HorizontalSpacer.
+
+<Props of={SectionHeader} />
