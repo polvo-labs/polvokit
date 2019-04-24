@@ -24,7 +24,8 @@ export default {
   },
 
   fonts: {
-    primary: 'Ubuntu'
+    primary: 'Ubuntu',
+    secondary: 'Ubuntu'
   },
 
   breakpoints: {

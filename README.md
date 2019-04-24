@@ -75,7 +75,7 @@ function Example () {
 - [x] FormSpacer
 - [x] FormField
 - [x] Media
-- [ ] Heading
+- [x] Heading
 - [ ] SectionHeader
 - [ ] Table
 - [ ] FileUploader
