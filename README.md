@@ -74,7 +74,7 @@ function Example () {
 - [x] ButtonSubmit
 - [x] FormSpacer
 - [x] FormField
-- [ ] Media
+- [x] Media
 - [ ] Table
 - [ ] FileUploader
 - [ ] Modal

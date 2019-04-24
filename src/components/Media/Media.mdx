@@ -1,0 +1,46 @@
+---
+name: Media
+route: /media
+menu: Utils
+---
+
+import { Playground, Props } from 'docz' 
+import Media from '.'
+
+# Media
+
+It works similar to [react-media](https://github.com/ReactTraining/react-media),
+but the `query` prop also accepts a callback which receives the theme breakpoints as argument.
+
+## Usage
+
+```
+import { Media } from 'polvokit'
+
+// It works similar to react-media
+<Media query='(max-width: 599px)'>
+  {matches => matches ? (
+      <p>The document is less than 600px wide.</p>
+    ) : (
+      <p>The document is at least 600px wide.</p>
+    )
+  }
+</Media>
+
+// But, the query prop also accepts a function
+<Media query={breakpoints => `(min-width: ${breakpoints.large})`}>
+  {matches => matches ? 'something' : 'other thing'}
+</Media>
+```
+
+## Example
+
+<Playground>
+  <Media query={bps => `(max-width: ${bps.medium})`}>
+    {matches => matches ? 'less than medium' : 'at least medium'}
+  </Media>
+</Playground>
+
+## Props
+
+<Props of={Media} />
