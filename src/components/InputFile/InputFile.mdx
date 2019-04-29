@@ -1,0 +1,42 @@
+---
+name: InputFile
+route: /input-file
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { Value } from 'react-values'
+import InputFile from '.' 
+
+# InputFile
+
+<Playground>
+  <Value>
+    {({ value, set }) => (
+      <InputFile value={value} onChange={set} />
+    )}
+  </Value>
+</Playground>
+
+<Playground>
+  <Value defaultValue={{ name: 'file-name.pdf' }}>
+    {({ value, set }) => (
+      <InputFile value={value} onChange={set} />
+    )}
+  </Value>
+</Playground>
+
+## Usage
+
+```js
+import { InputFile } from 'polvokit'
+
+<InputFile
+  value={value}
+  onChange={onChange}
+/>
+```
+
+## Props
+
+<Props of={InputFile} />

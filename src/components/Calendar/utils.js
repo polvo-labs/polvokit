@@ -28,15 +28,10 @@ export function makeDays (displayDate) {
 }
 
 export function useMessages () {
-  return useMemo(
-    () => {
-      return {
-        months: useConfig({ id: 'messages.months' }),
-        weekdays: useConfig({ id: 'messages.weekdays' }),
-        previousMonth: useConfig({ id: 'messages.previousMonth' }),
-        nextMonth: useConfig({ id: 'messages.nextMonth' })
-      }
-    },
-    []
-  )
+  return {
+    months: useConfig({ id: 'messages.months' }),
+    weekdays: useConfig({ id: 'messages.weekdays' }),
+    previousMonth: useConfig({ id: 'messages.previousMonth' }),
+    nextMonth: useConfig({ id: 'messages.nextMonth' })
+  }
 }

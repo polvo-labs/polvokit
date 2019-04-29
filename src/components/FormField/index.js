@@ -4,6 +4,7 @@ import {
   Input,
   InputDatePicker,
   InputDateRangePicker,
+  InputFile,
   Textarea,
   Select,
   Calendar,
@@ -19,12 +20,24 @@ FormField.Input = props =>
 FormField.InputDatePicker = props =>
   <FormField
     component={InputDatePicker}
+    defaultValue={null}
     {...props}
   />
 
 FormField.InputDateRangePicker = props =>
   <FormField
     component={InputDateRangePicker}
+    defaultValue={{
+      start: null,
+      end: null
+    }}
+    {...props}
+  />
+
+FormField.InputFile = props =>
+  <FormField
+    component={InputFile}
+    defaultValue={null}
     {...props}
   />
 
@@ -54,7 +67,7 @@ FormField.Switch = ({ label, ...props }) =>
 FormField.Calendar = props =>
   <FormField
     component={Calendar}
-    defaultValue={false}
+    defaultValue={null}
     {...props}
   />
 

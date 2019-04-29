@@ -6,7 +6,7 @@ function ButtonGroup (props) {
   const {
     stack,
     stackAt,
-    fill,
+    full,
     children,
     ...rest
   } = props
@@ -15,7 +15,7 @@ function ButtonGroup (props) {
     <Container
       stack={stack}
       stackAt={stackAt}
-      fill={fill}
+      full={full}
       {...rest}
     >
       {children}
@@ -25,7 +25,7 @@ function ButtonGroup (props) {
 
 ButtonGroup.propTypes = {
   /** Fill the remaining space */
-  fill: PropTypes.bool,
+  full: PropTypes.bool,
 
   /** Stack buttons */
   stack: PropTypes.bool,
@@ -35,7 +35,7 @@ ButtonGroup.propTypes = {
 }
 
 ButtonGroup.defaultProps = {
-  fill: false,
+  full: false,
   stack: false,
   stackAt: 'small'
 }

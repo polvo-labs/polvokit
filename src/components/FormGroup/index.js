@@ -12,7 +12,7 @@ import {
 function FormGroup ({ id, label, error, helper, children }) {
   return (
     <Container>
-      <Label htmlFor={id}>{label}</Label>
+      {label && <Label htmlFor={id}>{label}</Label>}
       <Control>
         {children}
       </Control>
@@ -31,7 +31,7 @@ FormGroup.propTypes = {
   id: PropTypes.string,
 
   /** Label */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
 
   /** Error */
   error: PropTypes.string,

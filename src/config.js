@@ -4,6 +4,9 @@ export default {
     submitting: 'Processing',
     loading: 'Loading',
     back: 'Back',
+    selectFile: 'Select file',
+    clear: 'Clear',
+    dropHere: 'Drop here',
     weekdays: [
       'Sun',
       'Mon',

@@ -18,12 +18,16 @@ import {
 
 <Playground>
   <Form onSubmit={console.log}>
-    {({ handleSubmit, values }) => (
+    {({ handleSubmit, values }) => console.log(values) || (
       <form onSubmit={handleSubmit}>
         <FormSpacer>
           <FormField.Input
             name='name'
             label='Name'
+          />
+          <FormField.InputFile
+            name='document'
+            label='PDF document'
           />
           <FormField.Input
             name='password'

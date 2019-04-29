@@ -1,0 +1,24 @@
+---
+name: Dropper
+route: /dropper
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import Dropper from '.' 
+
+# Dropper
+
+A simple component for file drag-and-drop.
+
+<Playground>
+  <Dropper onChange={console.log}>
+    <p style={{ height: 100 }}>
+      Hey, drop some files here...
+    </p>
+  </Dropper>
+</Playground>
+
+## Props
+
+<Props of={Dropper} />

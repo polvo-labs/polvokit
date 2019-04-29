@@ -9,7 +9,7 @@ export default function FormField (props) {
 
   const {
     component: Component,
-    defaultValue,
+    defaultValue = '',
     componentProps,
     label,
     helper,
@@ -50,7 +50,7 @@ FormField.propTypes = {
   helper: PropTypes.string,
 
   /** Component */
-  component: PropTypes.oneOf([
+  component: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func
   ]),

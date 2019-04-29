@@ -77,7 +77,8 @@ function Example () {
 - [x] Media
 - [x] Heading
 - [x] SectionHeader
-- [ ] InputFile
+- [x] Dropper
+- [x] InputFile
 - [ ] Table
 - [ ] FileUploader
 - [ ] Modal

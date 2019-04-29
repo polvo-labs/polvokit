@@ -25,7 +25,7 @@ const stackCss = css`
 export const Container = styled.div`
   display: flex;
 
-  ${ifProp('fill', css`
+  ${ifProp('full', css`
     width: 100%;
     > * {
       flex: 1 1;
