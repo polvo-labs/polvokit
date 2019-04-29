@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { getTheme } from 'src/index'
+import { getTheme } from '../../..'
 
 const colors = {
   default: 'primary',

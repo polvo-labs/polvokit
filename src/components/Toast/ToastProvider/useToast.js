@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Context } from 'src/components/Toast/ToastProvider/index'
+import { Context } from '.'
 
 export default function useToast () {
   return useContext(Context)
